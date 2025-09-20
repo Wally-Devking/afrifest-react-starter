@@ -1,0 +1,40 @@
+.footer{
+  padding: 40px 0 20px;
+  color: #fff;
+  background-image: url('src/assets/images/joinUsImage22.jpg'); /* <-- from public/ */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px 50px 0 0;
+}
+
+/* Logo: sit at extreme left on desktop */
+.footer-logo{
+  max-width: 120px;
+  display: block;
+  margin-left: 0;
+  margin-left: auto; 
+}
+
+/* Mobile: center the logo */
+@media (max-width: 768px){
+  .footer-logo{
+    margin: 0 auto;   /* centers within its column */
+  }
+}
+
+.footer-title{font-size:1rem;font-weight:600;margin-bottom:10px;color:#ffcc00}
+.footer-links li{margin-bottom:5px;transition:color .3s ease}
+.footer-links a{color:#fff;transition:color .3s ease}
+.footer-links a:hover{color:#ffcc00}
+
+.social-icons{
+  display:flex; align-items:center; justify-content:center; gap:50px;
+}
+.social-icons a{
+  display:inline-block; font-size:2.2rem; color:#ffcc00; transition:all .3s ease;
+}
+.social-icons a:hover{color:#fff; padding:8px}
+
+.footer-divider{border-color:#ffcc00}
+.dev-link{color:#ffcc00; font-weight:600}
+.dev-link:hover{text-decoration:underline}

@@ -1,0 +1,100 @@
+:root {
+  --primary:#ff3036;
+  --ink:#111827;
+  --muted:#6b7280;
+  --bg:#ffffff;
+  --card:#f9fafb;
+  --ring:rgba(255,48,54,.25);
+}
+
+.container{ max-width:1200px; margin:0 auto; padding:0 20px; }
+
+.contact{ background:var(--bg); color:var(--ink); }
+
+/* Header band */
+.contact__hero{
+  padding: 56px 0 28px;
+  background: linear-gradient(180deg, rgba(0,0,0,.04), transparent);
+}
+.contact__hero h1{
+  font-size: clamp(1.8rem, 2.2vw + 1rem, 2.4rem);
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+.contact__hero p{
+  margin: 0; color: var(--muted);
+}
+
+/* === New two-column section === */
+.contact__grid{
+  display: grid;
+  grid-template-columns: 1.1fr 1fr; /* image | form */
+  gap: 15px;
+  align-items: stretch;
+  padding: 24px 0 56px;
+}
+
+/* Left image */
+
+.contact__image img{
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  border-radius: 16px;
+}
+
+
+/* Form styles */
+.contact-form{ display:grid; gap:14px; }
+
+.form-row{ display:grid; gap:8px; }
+.form-row label{ font-weight:600; font-size:.95rem; }
+
+input[type="text"],
+input[type="email"],
+textarea{
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #c4c5c7ff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+textarea{ resize: vertical; }
+input:focus, textarea:focus{
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--ring);
+}
+input::placeholder, textarea::placeholder{ color:#9ca3af; }
+
+.form-actions{ margin-top: 6px; }
+
+.btn{
+  appearance:none; border:0; cursor:pointer; font-weight:700;
+  padding:12px 18px; border-radius:999px;
+  transition: transform .05s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn--primary{
+  background: var(--primary); color:#fff;
+  box-shadow: 0 8px 22px rgba(255,48,54,.25);
+}
+.btn--primary:hover{ transform: translateY(-1px); }
+.btn--primary:active{ transform: translateY(0); }
+
+/* Responsive: hide image on small screens, form full width */
+@media (max-width: 900px){
+  .contact__grid{
+    padding:0 40px;
+    grid-template-columns: 1fr; /* single column */
+  }
+  .contact__image{ display: none; 
+  }
+  .btn{
+    margin-bottom: 20px; width: 100%;
+ 
+}
+}

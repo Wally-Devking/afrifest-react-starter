@@ -1,0 +1,18 @@
+.events-section{padding:3rem 1rem;background:#ffffff}
+.events-header{text-align:center}
+.events-header h2{font-weight:800;color:#111827}
+.events-header p{margin-top:1rem;font-size:1.1rem;color:#4b5563}
+.events-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem}
+
+
+.event-card{
+    background:#fff;
+    border-radius:1rem;
+    padding:1rem;
+    text-align:center;
+    transition:transform .3s ease, box-shadow .3s ease}
+
+/* .event-card:hover{transform:translateY(-6px); box-shadow:0 8px 20px rgba(0,0,0,.5)} */
+.event-card img{width:70px;height:70px;margin:2rem auto}
+.event-card h3{font-size:1.4rem;font-weight:700;margin-bottom:.5rem;color:#1f2937}
+.event-card p{font-size:1rem;color:#6b7280;line-height:1.5}

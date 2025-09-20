@@ -1,0 +1,43 @@
+.partners-section {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Default desktop size */
+.partner-logo {
+  height: 100px;
+  object-fit: contain;
+  margin: 12px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .partner-logo {
+    height: 80px;
+    margin: 10px;
+  }
+}
+
+/* Large phones */
+@media (max-width: 768px) {
+  .partner-logo {
+    height: 50px;
+    margin: 8px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .partner-logo {
+    height: 60px;
+    margin: 6px;
+  }
+}

@@ -1,0 +1,83 @@
+
+
+/* === LOGO MARQUEE === */
+.marquee {
+  --bg: #000000ff;         /* deep navy backdrop */
+  --gap: 72px;           /* space between logos */
+  --height: 72px;        /* strip height */
+  --speed: 15s;  
+  position: relative;
+  width: 100%;
+  background: var(--bg);
+  overflow: hidden;
+  height: var(--height);
+  display: flex;
+  align-items: center;
+}
+
+.marquee__item {
+  flex: 0 0 auto;
+  font-size: 1.25rem;
+  color: var(--yellow);
+  white-space: nowrap;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+}
+/* Track: two sets of logos laid in a row and animated left */
+.marquee__track {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  width: max-content;
+  animation: marquee-slide var(--speed) linear infinite;
+  will-change: transform;
+  padding: 0 var(--gap);
+}
+
+/* Each logo container */
+.marquee__item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  height: calc(var(--height) - 16px);
+}
+
+
+.marquee__item img:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* Soft fades at edges so logos “peek” in/out */
+.marquee__fade {
+  position: absolute;
+  top: 0; bottom: 0; width: 120px; pointer-events: none;
+  z-index: 2;
+}
+.marquee__fade--left  { left: 0;  background: linear-gradient(to right, var(--bg), transparent); }
+.marquee__fade--right { right: 0; background: linear-gradient(to left,  var(--bg), transparent); }
+
+/* Pause on hover */
+.marquee:hover .marquee__track { animation-play-state: paused; }
+
+/* Motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+}
+
+/* Keyframes */
+@keyframes marquee-slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* because we duplicated the items */
+}
+
+/* Responsiveness: tighten spacing/height on small screens */
+@media (max-width: 768px) {
+  .marquee { --gap: 48px; --height: 64px; }
+  .marquee__fade { width: 72px; }
+}
+@media (max-width: 480px) {
+  .marquee { --gap: 36px; --height: 56px; }
+  .marquee__fade { width: 56px; }
+}

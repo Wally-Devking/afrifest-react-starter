@@ -1,0 +1,25 @@
+.parallax{
+  background-image:url('src/assets/images/dance.jpg');
+  min-height:300px; 
+  background-attachment:fixed; 
+  background-position:center;
+  background-repeat:no-repeat; 
+  background-size:contain; 
+  display:flex; 
+  justify-content:center;
+  align-items:center; 
+  color:white; 
+  text-align:center; 
+  position:relative; 
+  z-index:1;
+}
+@media (max-width: 768px) {
+  .parallax {
+      min-height:150px; 
+
+  }
+}
+.parallax::after{content:''; position:absolute; inset:0; background:rgba(0,0,0,0.1); z-index:-1}
+.parallax-content{z-index:2; max-width:800px; padding:20px}
+.parallax-content h2{font-size:3rem; margin-bottom:15px}
+.parallax-content p{font-size:1.2rem}
