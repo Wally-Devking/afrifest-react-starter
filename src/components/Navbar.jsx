@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
+import havlogo_png from "../assets/images/havlogo.png";
+
 
 
 
@@ -43,7 +45,7 @@ export default function Navbar() {
       <div className="logo">
         
     <Link to="/" aria-label="Go home">
-      <img src="/src/assets/images/havlogo.png" alt="Logo" />
+      <img src={havlogo_png} alt="Logo" />
     </Link>
       
       </div>

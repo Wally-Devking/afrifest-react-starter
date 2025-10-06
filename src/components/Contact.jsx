@@ -6,6 +6,8 @@ import Marquee from "./Marquee";
 import Sponsors from "./Sponsors";
 import Partners from "./Partners";
 import Events from "./Events";
+import contact_jpg from "../assets/images/contact.jpg";
+
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -54,7 +56,7 @@ export default function Contact() {
         {/* Two-column layout */}
         <section className="container contact__grid">
           <aside className="contact__image" aria-hidden="true">
-            <img src="/src/assets/images/contact.jpg" alt="contact image" />
+            <img src={contact_jpg} alt="contact image" />
           </aside>
 
           {/* Right: Form */}

@@ -2,7 +2,7 @@
 .contact-content{
   background:
     linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.11)),  /* adjust .35 */
-    url("/src/assets/images/joinUs.png") center / cover no-repeat;
+    url("../assets/images/joinUs.png") center / cover no-repeat;
 }
 
 
@@ -70,7 +70,7 @@
     /* slightly darker overlay for readability on small screens */
     background:
       linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.70)),
-      url("/src/assets/images/joinUs.png") center / cover no-repeat;
+      url("../assets/images/joinUs.png") center / cover no-repeat;
   }
 
   .section-heading h2{

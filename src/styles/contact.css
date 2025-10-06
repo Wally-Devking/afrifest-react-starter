@@ -88,7 +88,7 @@ input::placeholder, textarea::placeholder{ color:#9ca3af; }
 /* Responsive: hide image on small screens, form full width */
 @media (max-width: 900px){
   .contact{    
-    background: url("/src/assets/images/joinUs.png") center/cover no-repeat;
+    background: url("../assets/images/joinUs.png") center/cover no-repeat;
     background-color: rgba(0, 0, 0, 0.7); /* overlay color */
     background-blend-mode: multiply;  /* or: darken */
     color: #fff;

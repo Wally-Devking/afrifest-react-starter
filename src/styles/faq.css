@@ -109,7 +109,8 @@ text-transform:uppercase;
 .faq-a p{ margin:0; }
 
 /* See more button row */
-.faq-actions{ display:flex; justify-content:center; margin-top:20px; }
+.faq-actions{ display:flex; justify-content:center; margin-top:20px; 
+}
 
 /* Responsive tweaks */
 @media (max-width:768px){

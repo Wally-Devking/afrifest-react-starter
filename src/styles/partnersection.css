@@ -269,7 +269,7 @@
     bottom:100px;
     width: clamp(200px, 20vw, 100px);
     height: clamp(106px, 16vw, 84px);
-    background: url("/src/assets/images/footerlogo.png") center / contain no-repeat; /* <-- replace if needed */
+    background: url("../assets/images/footerlogo.png") center / contain no-repeat; /* <-- replace if needed */
     z-index: 3;                /* above wave and content */
     pointer-events: none;      /* never block taps */
     filter: drop-shadow(0 9px 10px rgba(0, 0, 0, 8));

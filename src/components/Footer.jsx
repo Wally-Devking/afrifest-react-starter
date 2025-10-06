@@ -1,4 +1,6 @@
 import '../styles/footer.css'
+import footerlogo_png from "../assets/images/footerlogo.png";
+
 
 export default function Footer(){
   return (
@@ -24,7 +26,7 @@ export default function Footer(){
           </div>
 
           <div className="col-md-4 text-md-end text-center">
-            <img src="/src/assets/images/footerlogo.png" alt="Afri-Fest East" className="footer-logo mb-3" />
+            <img src={footerlogo_png} alt="Afri-Fest East" className="footer-logo mb-3" />
             <p className="footer-text small mb-0">Celebrating authentic African taste and culture</p>
           </div>
         </div>

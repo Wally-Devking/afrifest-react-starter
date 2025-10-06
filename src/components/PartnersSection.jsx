@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/Partnersection.css";
+import footerlogo_png from "../assets/images/footerlogo.png";
+
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xkgobnvj";
 
@@ -83,7 +85,7 @@ const handleSubmit = async (e) => {
         {/* Right-side collage (desktop). Keep or replace with your tiles */}
         <div className="partners-collage">
           <div className="collage-grid">
-            <div className="tile tile-center"><span className="pepper" aria-hidden="true"><img src="/src/assets/images/footerlogo.png" alt="" /></span></div>
+            <div className="tile tile-center"><span className="pepper" aria-hidden="true"><img src={footerlogo_png} alt="" /></span></div>
             {(logoGrid.length ? logoGrid : defaultTiles).map((t, i) => (
               <div className="tile" key={i}><img src={t.src} alt={t.alt} loading="lazy" /></div>
             ))}

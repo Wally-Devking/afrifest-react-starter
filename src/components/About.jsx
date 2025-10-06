@@ -1,5 +1,10 @@
 import { useEffect, useRef } from 'react'
 import '../styles/about.css'
+import Child_jpg from "../assets/images/Child.jpg";
+import mask_jpg from "../assets/images/mask.jpg";
+import b3_jpg from "../assets/images/b3.jpg";
+import legs_jpg from "../assets/images/legs.jpg";
+
 
 export default function About(){
   const counterRef = useRef(null)
@@ -52,10 +57,10 @@ export default function About(){
         </div>
 
         <div className="mosaic" aria-label="Our community in action">
-          <img src="/src/assets/images/Child.jpg" alt="Festival colors" />
-          <img src="/src/assets/images/mask.jpg" alt="Traditional heritage" />
-          <img src="src/assets/images/b3.jpg" alt="Youth engagement" />
-          <img src="src/assets/images/legs.jpg" alt="Community support" />
+          <img src={Child_jpg} alt="Festival colors" />
+          <img src={mask_jpg} alt="Traditional heritage" />
+          <img src={b3_jpg} alt="Youth engagement" />
+          <img src={legs_jpg} alt="Community support" />
         </div>
       </div>
 {/* above wave */}

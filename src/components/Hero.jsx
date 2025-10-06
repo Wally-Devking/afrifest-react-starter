@@ -1,11 +1,13 @@
 import '../styles/hero.css'
+import afrivid_mp4 from "../assets/video/afrivid.mp4";
+
 
 
 export default function Hero(){
   return (
     <section className="hero-section">
       <video className="background-video desktop-video" autoPlay muted loop playsInline>
-        <source src="/src/assets/video/afrivid.mp4" type="video/mp4" />
+        <source src={afrivid_mp4} type="video/mp4" />
       </video>
       <video className="background-video mobile-video" autoPlay muted loop playsInline>
         <source src="/video/afrimobillll.mp4" type="video/mp4" />
