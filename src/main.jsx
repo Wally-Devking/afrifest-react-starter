@@ -11,7 +11,7 @@ import About from './components/About.jsx';
 import FaqPage from './components/FaqPage.jsx'; 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-
+  <React.StrictMode>
     <HashRouter>
     <Routes>
       <Route path="/" element={<App />} />
@@ -21,4 +21,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/faq" element={<FaqPage />} />
     </Routes>
   </HashRouter>
+  </React.StrictMode>
+
 )
