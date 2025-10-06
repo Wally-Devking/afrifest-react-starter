@@ -1,19 +1,19 @@
 // src/main.jsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import React from 'react';                          // <-- add this line
+import ReactDOM from 'react-dom/client';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
-import App from "./App";
-import "./styles/global.css";
-import "./styles/variables.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import App from './App';
+import './styles/global.css';
+import './styles/variables.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import PressRelease from "./components/PressRelease";
 import Contact from "./components/Contact";
 import About from "./components/About.jsx";
 import FaqPage from "./components/FaqPage.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HashRouter>
       <Routes>
