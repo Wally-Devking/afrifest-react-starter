@@ -10,11 +10,13 @@ import Sponsors from './components/Sponsors.jsx'
 import Partners from './components/Partners.jsx'
 import Footer from './components/Footer.jsx'
 import Marquee from './components/Marquee.jsx'
-import Contact from './components/Contact.jsx'
+import PartnersSection from './components/PartnersSection.jsx'
+import FaqHome from './components/FaqHome.jsx'
 
 export default function App() {
   return (
     <>
+      <Marquee />
       <Navbar />
       <Hero />
       <About />
@@ -24,6 +26,8 @@ export default function App() {
       <Marquee />
       <Parallax />
       <MapSection />
+      <PartnersSection />
+      <FaqHome />
       <Sponsors />
       <Partners />
       <Footer />

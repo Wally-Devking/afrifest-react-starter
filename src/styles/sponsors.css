@@ -47,6 +47,7 @@
   .section-title {
     font-size: 1.5rem;
     text-align: center;
+    margin-top: -30px;
   }
 }
 
@@ -63,4 +64,21 @@
     text-align: center;
   }
 }
+
+/* ==== Mobile logo normalization & alignment (append at end) ==== */
+@media (max-width: 768px){
+  .sponsors-section{
+        text-align: center; /* center inline-block logos */
+  }
+
+  .sponsors-section .sponsor-logo{
+    width: 100px !important;   /* uniform box */
+    height: 100px !important;   /* uniform box */
+    margin: 0px 10px !important;
+    display: inline-block;
+    object-fit: contain;        /* no distortion */
+    vertical-align: middle;
+  }
+}
+
 

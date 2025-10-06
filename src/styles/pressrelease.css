@@ -1,115 +1,115 @@
-/* === Press Release Page Styling === */
-
-.press-page {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-  font-family: "Poppins", sans-serif;
-  line-height: 1.6;
-  color: #222;
-}
-
-/* Page title */
-.press-page h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 30px;
+/* Page */
+.press {
+  background: #fff;
   color: #111;
 }
 
-/* Grid wrapper */
-.press-wrapper {
+/* Two-column container */
+.press-container{
+  max-width: 1100px;
+  margin: 40px auto 32px;
+  padding: 0 16px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 40px;
+  grid-template-columns: 360px 1fr;  /* left card + right content */
+  gap: 24px;
+  align-items: start;
 }
 
-/* Sidebar (Keypoints, Links, Contacts) */
-.press-aside {
-  background: #f9fafb;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #eee;
+/* LEFT card */
+.press-card{
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+  padding: 14px 16px 18px;
 }
 
-.press-block {
-  margin-bottom: 25px;
+.press-title{
+  margin: 4px 0 12px;
+  color: #e10600;            /* bold red */
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: .5px;
 }
 
-.press-heading {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #ff3036;
-}
+.aside-section + .aside-section{ margin-top: 18px; }
 
-.press-subheading {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.press-list {
-  list-style: disc;
-  padding-left: 20px;
-}
-.press-list li {
-  margin-bottom: 6px;
+.aside-heading{
   font-size: 0.95rem;
-}
-
-/* Main article content */
-.press-content h2 {
-  font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  color: #111;
+  color: #111827;
+  margin: 0 0 8px;
 }
 
-.press-content p {
-  margin-bottom: 14px;
-  font-size: 1rem;
-  color: #444;
+.aside-list{
+  padding-left: 18px;
+  margin: 0;
 }
+.aside-list li{ margin-bottom: .6rem; line-height: 1.5; }
 
-.press-content strong {
-  color: #000;
+.aside-links{
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
-.press-content a {
-  color: #ff3036;
-  font-weight: 600;
+.aside-links li{ margin-bottom: .5rem; }
+.aside-links a{
+  color: #1a73e8;            /* link blue */
   text-decoration: none;
 }
-.press-content a:hover {
-  text-decoration: underline;
+.aside-links a:hover{ text-decoration: underline; }
+
+/* RIGHT content */
+.article-title{
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #111827;
+  margin: 4px 0 12px;
 }
 
-/* Ticket link */
-.press-ticket-link {
-  display: inline-block;
-  margin-top: 10px;
-  background: #ff3036;
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 25px;
+.press-body p{
+  margin: 10px 0;
+  line-height: 1.75;
+  color: #111;
+}
+
+.info-title{
+  margin-top: 16px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.eventbrite{
+  color: #1a73e8;
+  text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
 }
-.press-ticket-link:hover {
-  background: #e00008;
-  transform: translateY(-2px);
+.eventbrite:hover{ text-decoration: underline; }
+
+/* Optional: keep the left card visible while scrolling on desktop */
+.press-aside{ position: sticky; top: 90px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px){
+  .press-container{
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+  }
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .press-wrapper {
-    grid-template-columns: 1fr;
+@media (max-width: 840px){
+  .press-container{
+    grid-template-columns: 1fr;   /* stack */
   }
+  .press-aside{ position: static; }
+  .press-card{ margin-bottom: 8px; }
+  .article-title{ font-size: 1.6rem; }
+}
 
-  .press-aside {
-    margin-bottom: 30px;
-  }
+@media (max-width: 480px){
+  .press-title{ font-size: 1.6rem; }
+  .article-title{ font-size: 1.35rem; }
+  .press-body p{ font-size: .98rem; }
 }

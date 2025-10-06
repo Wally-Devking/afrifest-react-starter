@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/navbar.css";
+import { Link } from "react-router-dom";
+
 
 
 export default function Navbar() {
@@ -39,8 +41,13 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src="src/assets/images/Afri-fest-logo-black.png" alt="Logo" />
+        
+    <Link to="/" aria-label="Go home">
+      <img src="/src/assets/images/havlogo.png" alt="Logo" />
+    </Link>
+      
       </div>
+
 
       {/* Mobile overlay to capture outside clicks */}
       {open && <div className="nav-overlay" onClick={() => setOpen(false)} />}
@@ -55,11 +62,26 @@ export default function Navbar() {
         role="menu"
         aria-hidden={!open}
       >
-        <li role="none"><a role="menuitem" a href="/">Home</a></li>
+
         <li role="none"><a role="menuitem" a href="/#about">About</a></li>
         <li role="none"><a role="menuitem" a href="/pressrelease">Press Release</a></li>
         <li role="none"><a role="menuitem" a href="/contact">Contact Us</a></li>
-        <li role="none"><button className="btn rounded-pill">Our Merch</button></li>
+        <li role="none"><a role="menuitem" a href="/faq">FAQs</a></li>
+<li role="none">
+  <button
+    className="btn rounded-pill"
+    type="button"
+    onClick={() => window.open(
+      "https://www.tiktok.com/@lagos_night_uk?_t=ZN-90EqrWrlYd4&_r=1",
+      "_blank",
+      "noopener,noreferrer"
+    )}
+  >
+    Our Merch
+  </button>
+</li>
+
+   
       </ul>
 
 

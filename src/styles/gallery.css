@@ -1,5 +1,5 @@
 .gallery-section {
-  padding: 40px 20px;
+  padding: 0px 20px;
 }
 
 .gallery-title {
@@ -69,7 +69,7 @@
 /* === MOBILE DISPLAY SUPPORT (no size changes) === */
 @media (max-width: 768px) {
   .gallery-section {
-    padding: 30px 15px; 
+    padding: 0px 15px; 
     
   }
 
@@ -89,7 +89,7 @@
 
 @media (max-width: 480px) {
   .gallery-section {
-    padding: 25px 10px;
+    padding: 0px 10px;
   }
 
   .gallery-title {
@@ -111,3 +111,39 @@
 }
 }
 
+/* === Mobile only: remove slider shadow overlays === */
+@media (max-width: 768px){
+  /* Swiper (coverflow/3D) shadows */
+  .swiper-slide-shadow-left,
+  .swiper-slide-shadow-right,
+  .swiper-3d .swiper-slide-shadow-left,
+  .swiper-3d .swiper-slide-shadow-right{
+    display: none !important;
+    opacity: 0 !important;
+  }
+
+  /* Slick edges/fade masks */
+  .slick-list::before,
+  .slick-list::after{
+    content: none !important;
+    display: none !important;
+  }
+
+  /* In case you added your own fades on the gallery */
+  .gallery-slider::before,
+  .gallery-slider::after,
+  .gallery-slide::before,
+  .gallery-slide::after{
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Prevent grey strips from any mask/gradient on small screens */
+  .gallery-slider,
+  .swiper,
+  .slick-list{
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    background: transparent !important;
+  }
+}

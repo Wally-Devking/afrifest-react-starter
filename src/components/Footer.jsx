@@ -8,23 +8,23 @@ export default function Footer(){
           <div className="col-md-4 mb-4 mb-md-0">
             <h5 className="footer-title">Quick Links</h5>
             <ul className="footer-links list-unstyled">
-              <li><a href="#">Lagos Night</a></li>
+              <li><a href="https://lagosnight.co.uk/" target='blank' >Lagos Night</a></li>
               <li><a href="#">Lasgidi</a></li>
-              <li><a href="#">FewGoodMen</a></li>
+              <li><a href="https://fewgoodmen.co.uk/" target='blank'>FewGoodMen</a></li>
             </ul>
           </div>
 
           <div className="col-md-4 mb-4 mb-md-0 text-center">
             <h5 className="footer-title">Connect</h5>
             <div className="social-icons">
-              <a href="mailto:info@yourdomain.com" aria-label="Email"><i className="fas fa-envelope"></i></a>
-              <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+              <a href="mailto:admin@fewgoodmen.co.uk" aria-label="Email"><i className="fas fa-envelope" target="blank" ></i></a>
+              <a href="https://web.facebook.com/profile.php?id=61560358343870" target='blank' aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/afrifest_east" aria-label="Instagram" target='blank'><i className="fab fa-instagram"></i></a>
             </div>
           </div>
 
           <div className="col-md-4 text-md-end text-center">
-            <img src="src/assets/images/Afri-fest-logo-black.png" alt="Afri-Fest East" className="footer-logo mb-3" />
+            <img src="/src/assets/images/footerlogo.png" alt="Afri-Fest East" className="footer-logo mb-3" />
             <p className="footer-text small mb-0">Celebrating authentic African taste and culture</p>
           </div>
         </div>

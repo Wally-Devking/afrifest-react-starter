@@ -9,7 +9,7 @@ export default function About(){
     let observer = new IntersectionObserver(entries => {
       entries.forEach(entry=>{
         if(entry.isIntersecting){
-          animateCounter(counterRef.current, 5000, 4000)
+          animateCounter(counterRef.current, 1500, 1500)
           observer.disconnect()
         }
       })
@@ -48,17 +48,20 @@ export default function About(){
               <span className="label">Participants</span>
             </div>
           </div>
-            <a href="https://gelato.com" target="_blank" className="shop-link" rel="noreferrer">Partner / Sponsor</a>
           </div>
         </div>
 
         <div className="mosaic" aria-label="Our community in action">
-          <img src="/src/assets/images/b1.jpg" alt="Festival colors" />
-          <img src="/src/assets/images/b4.jpg" alt="Traditional heritage" />
+          <img src="/src/assets/images/Child.jpg" alt="Festival colors" />
+          <img src="/src/assets/images/mask.jpg" alt="Traditional heritage" />
           <img src="src/assets/images/b3.jpg" alt="Youth engagement" />
-          <img src="src/assets/images/b2.jpg" alt="Community support" />
+          <img src="src/assets/images/legs.jpg" alt="Community support" />
         </div>
       </div>
+{/* above wave */}
+       <svg className="partners-wave" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,120 C280,200 560,0 840,80 C1080,145 1260,150 1440,110 L1440,220 L0,220 Z" />
+        </svg>
     </section>
   )
 }

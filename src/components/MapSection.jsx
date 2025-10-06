@@ -9,8 +9,8 @@ export default function MapSection(){
             <div className="col-lg-8 offset-lg-2 text-center">
               <div className="section-heading">
                 <h2>
- Locate The Event Venue
-                  <small style={{fontSize:'15px', fontWeight:'normal', display:'block'}}>(16th August 2026)</small>
+                 Locate The Event Venue
+                  <small style={{fontSize:'15px', fontWeight:'normal', display:'block'}}>(15th August 2026)</small>
                 </h2>
               </div>
             </div>

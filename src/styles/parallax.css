@@ -4,7 +4,7 @@
   background-attachment:fixed; 
   background-position:center;
   background-repeat:no-repeat; 
-  background-size:contain; 
+  background-size:cover; 
   display:flex; 
   justify-content:center;
   align-items:center; 
@@ -15,6 +15,7 @@
 }
 @media (max-width: 768px) {
   .parallax {
+      background-image:url('src/assets/images/dance2.jpg');
       min-height:150px; 
 
   }

@@ -39,9 +39,15 @@ export default function Events(){
             <img src="src/assets/images/games.png" alt="Games" />
             <h3>Games</h3>
             <p>Fun, interactive African games for all ages to enjoy.</p>
+            
           </div>
+          </div>
+
+      {/* Centered Button */}
+        <div className="events-btn-wrapper">
+          <a href="https://www.eventbrite.co.uk/o/few-good-men-52207984483" target="blank" className="hero-btn">Buy Tickets</a>
         </div>
       </div>
     </section>
-  )
+    )
 }

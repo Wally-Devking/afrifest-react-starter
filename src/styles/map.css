@@ -1,7 +1,106 @@
-.contact-content{background-image:url('src/assets/images/joinUsImage22.jpg')}
-.contact-section{background-image:url('src/assets/images/joinUsImage22.jpg')}
-.section-heading h2{font-size:2rem;margin-bottom:10px;font-weight:700;color:#ffffff;position:relative;display:inline-block;margin-top:50px}
-.section-heading h2::after{content:'';display:block;width:80px;height:4px;margin:12px auto 0;border-radius:2px;animation:slideIn 2s infinite alternate}
-.subtitle{margin-top:10px;font-size:16px;color:#fff;font-style:italic}
-#map iframe{box-shadow:0 8px 25px rgba(0,0,0,.35);transition:transform .4s ease, box-shadow .4s ease;margin-bottom:50px;width:100%;height:60vh;display:flex;justify-content:center;align-items:center}
-#map iframe:hover{transform:scale(1.02);box-shadow:0 12px 40px rgba(0,0,0,.5)}
+/* ========= Contact Section (clean + responsive) ========= */
+.contact-content{
+  background:
+    linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.11)),  /* adjust .35 */
+    url("/src/assets/images/joinUs.png") center / cover no-repeat;
+}
+
+
+/* ensure it’s visible */
+.contact-section {
+  display: flex;
+  align-items: center;
+}
+
+.contact-content {
+  padding: 40px 20px;
+}
+
+/* ========= Headings ========= */
+.section-heading h2 {
+  position: relative;
+  display: inline-block;
+  margin: 50px 0 10px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000ff;
+}
+
+.section-heading h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 2px;
+  animation: slideIn 2s infinite alternate;
+  background: rgba(255,255,255,0.9); /* give it a color so it shows */
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+  font-style: italic;
+}
+
+/* ========= Map ========= */
+#map iframe {
+  width: 100%;
+  height: 60vh;
+  display: block;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.35);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+#map iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0,0,0,.5);
+}
+
+@media (max-width: 768px){
+  .contact-section{
+    flex-direction: column;
+  }
+
+  .contact-content{
+    padding: 0px 16px;
+    text-align: center;
+    /* slightly darker overlay for readability on small screens */
+    background:
+      linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.70)),
+      url("/src/assets/images/joinUs.png") center / cover no-repeat;
+  }
+
+  .section-heading h2{
+    font-size: 1.6rem;
+    margin: 28px 0 8px;
+    color: var(--dark);
+  }
+
+  .section-heading h2::after{
+    width: 56px;
+    height: 3px;
+    margin-top: 10px;
+  }
+
+  .subtitle{
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  #map iframe{
+    height: 45vh;
+    margin-bottom: 32px;
+  }
+}
+
+/* ===== Small phones (≤480px) ===== */
+@media (max-width: 480px){
+  .contact-content{ padding: 20px 14px; }
+  .section-heading h2{ font-size: 1.35rem; margin: 20px 0 6px; }
+  .subtitle{ font-size: 13px; }
+  .section-heading h2::after{ width: 44px; height: 3px; }
+  #map iframe{ height: 40vh; }
+}

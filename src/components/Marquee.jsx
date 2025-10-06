@@ -2,7 +2,7 @@ import '../styles/marquee.css';
 
 const texts = [
   'We Are Afri-fest',
-  'Next Event Loading... 26 August 2026',
+  'Next Event Loading... 15th August 2026',
   'Dont Miss Out!!!',
   'Come Let Us Celebrate Africa Together',
 ];

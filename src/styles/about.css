@@ -3,8 +3,19 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: var(--yellow);
-  padding: 80px 20px;
+  background: radial-gradient(1200px 600px at 70% 10%, rgba(255,255,255,0.06), transparent 60%),
+              linear-gradient(135deg, var(--afri-indigo) 0%, var(--afri-plum) 10%, #ff9500ff 100%);  padding-top: 80px;
+}
+
+/* wave svg */
+.partners-wave{
+  display:block;
+  width: 100%;
+  height: 300px;
+}
+.partners-wave path{
+  fill: #fff;
+  opacity: .98;
 }
 
 .about-inner {
@@ -65,7 +76,7 @@
 /* Counter */
 .participants-section {
   text-align: left;
-  color: var(--primary);
+  color: #6b1e00;
   font-size: 40px;
   margin: 10px 0 20px;
 }
@@ -77,16 +88,24 @@
   font-size: 48px;
   font-weight: 800;
   align-items: baseline;
+  
 }
 
 .plus {
   font-size: 48px;
-  color: var(--primary);
+  color: #6b1e00;
 }
 
 .label {
   font-size: 30px;
   font-weight: 600;
+  
+}
+
+.counter{
+    color: #6b1e00;
+    
+
 }
 
 /* Partner/Sponsor button */
@@ -95,7 +114,7 @@
 }
 
 .shop-link {
-  background: #ff3036;
+  background: #dd3216;
   color: #fff;
   padding: 10px 18px;
   border-radius: 10px;
@@ -115,6 +134,7 @@
     height: 200px;
   }
 }
+
 
 /* Tablets */
 @media (max-width: 992px) {
@@ -137,8 +157,18 @@
 /* Large phones / small tablets */
 @media (max-width: 768px) {
   .about {
-    padding: 56px 16px;
+    padding-top: 60px;
   }
+  /* wave svg */
+.partners-wave{
+  display:block;
+  width: 100%;
+  height: 300px;
+}
+.partners-wave path{
+  fill: #fff;
+  opacity: .98;
+}
 
   .about-inner {
     padding: 0 16px;

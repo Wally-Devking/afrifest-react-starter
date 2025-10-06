@@ -3,6 +3,9 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "../styles/contact.css";
 import Marquee from "./Marquee";
+import Sponsors from "./Sponsors";
+import Partners from "./Partners";
+import Events from "./Events";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -50,10 +53,8 @@ export default function Contact() {
 
         {/* Two-column layout */}
         <section className="container contact__grid">
-          {/* Left: Image (hidden on mobile) */}
           <aside className="contact__image" aria-hidden="true">
-            {/* Put your image file in /public/assets/images/... */}
-            <img src="/src/assets/images/heropic.jpg" alt="contact image" />
+            <img src="/src/assets/images/contact.jpg" alt="contact image" />
           </aside>
 
           {/* Right: Form */}
@@ -119,6 +120,9 @@ export default function Contact() {
         </section>
       </main>
 
+      <Events />
+      <Sponsors />
+      <Partners />  
       <Footer />
     </>
   );

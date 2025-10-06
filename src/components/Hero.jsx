@@ -12,9 +12,9 @@ export default function Hero(){
       </video>
       <div className="hero-overlay">
         <h2>Experience Africa Like Never Before</h2>
-        <p><span className="accent">Culture • Music • Fashion • Heritage</span></p>
-        <h3>Chapelfield Gardens 20St Norwich UK: <span className="date">12th July 2026</span></h3>
-        <a href="#tickets" className="hero-btn">Buy Tickets</a>
+        <p><span className="accent">Culture • Music • Food • Heritage</span></p>
+        <h3>Chapelfield Gardens, Norwich: <span className="date">15th August 2026</span></h3>
+        <a href="https://www.eventbrite.co.uk/o/few-good-men-52207984483" target='blank' className="hero-btn">Buy Tickets</a>
       </div>
     </section>
   )

@@ -41,3 +41,18 @@
     margin: 6px;
   }
 }
+//* ==== Mobile logo normalization & alignment (append at end) ==== */
+@media (max-width: 768px){
+  .partners-section{
+        text-align: center; /* center inline-block logos */
+  }
+
+  .partners-section .partners-logo{
+    width: 150px !important;   /* uniform box */
+    height: 150px !important;   /* uniform box */
+    margin: 0px 0px !important;
+    display: inline-block;
+    object-fit: contain;        /* no distortion */
+    vertical-align: middle;
+  }
+}
