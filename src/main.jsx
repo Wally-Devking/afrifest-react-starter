@@ -5,13 +5,14 @@ import './styles/variables.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import PressRelease from "./components/PressRelease";
 import Contact from "./components/Contact";
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import About from './components/About.jsx';
 import FaqPage from './components/FaqPage.jsx'; 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-  <BrowserRouter>
+  <HashRouter>
+
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/pressrelease" element={<PressRelease />} />
@@ -22,5 +23,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 )

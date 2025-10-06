@@ -13,6 +13,7 @@ import Marquee from './components/Marquee.jsx'
 import PartnersSection from './components/PartnersSection.jsx'
 import FaqHome from './components/FaqHome.jsx'
 
+
 export default function App() {
   return (
     <>
