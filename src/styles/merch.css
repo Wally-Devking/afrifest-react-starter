@@ -1,31 +1,41 @@
 /* Section polish */
 .merch-section2 {
+  background: #fcaf23;
   position: relative;
   padding: 60px 60px;
   overflow: hidden;
 }
 
-.merch-header { text-align: center; margin-bottom: 24px; }
+.merch-header { 
+  text-align: center; 
+  margin-bottom: 24px; 
+}
 .merch-title {
   letter-spacing: 0.4px;
   font-weight: 700;
+  color: #6b1e00;
 }
 .merch-subtitle {
   opacity: 0.85;
   font-size: 1rem;
   margin-top: 6px;
+
 }
 
 /* Card */
 .merch-item2 {
   position: relative;
   border-radius: 18px;
-  padding: 14px 14px 16px;
-  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+  padding: 14px 14px 1px;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 260ms ease;
+  box-shadow: 0 16px 40px rgba(35, 34, 34, 0.18);
+  background: white;              
+
+
 }
 .merch-item2:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.65);
 }
 
 /* Image frame */
@@ -33,13 +43,15 @@
   position: relative;
   border-radius: 14px;
   overflow: hidden;
-  aspect-ratio: 5 / 5;                 /* consistent card heights */
+  aspect-ratio: 5 / 5;  
+  background: white;               /* consistent card heights */
 }
 .merch-image-wrap img {
   width: 100%; height: 100%;
   object-fit: cover;
   transform: scale(1.02);
   transition: transform 380ms ease;
+
 }
 .merch-item2:hover .merch-image-wrap img { transform: scale(1.06); }
 
@@ -51,7 +63,8 @@
   padding: 6px 10px;
   border-radius: 999px;
   background: rgba(255,255,255,0.14);
-  color: #000000ff;
+  color: #6b1e00;
+;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255,255,255,0.18);
@@ -62,7 +75,7 @@
   margin: 14px 4px 6px;
   font-weight: 600;
   letter-spacing: .2px;
-  color: #000000ff;
+  color: #6b1e00;
 }
 
 /* Subtle in-card CTA */
@@ -70,6 +83,7 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 6px;
+  
 }
 
 

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Crazy Sixties";
+  src: url("/fonts/CrazySixties.woff2") format("woff2"),
+       url("/fonts/CrazySixties.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Optional outline version */
+@font-face {
+  font-family: "Crazy Sixties Hollow";
+  src: url("/fonts/CrazySixtiesHollow.woff2") format("woff2"),
+       url("/fonts/CrazySixtiesHollow.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply globally */
+html, body {
+  font-family: "Crazy Sixties", system-ui, sans-serif;
+}

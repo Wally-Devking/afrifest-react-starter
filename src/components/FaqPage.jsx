@@ -2,6 +2,9 @@ import { useState } from "react";
 import "../styles/faq.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Events from "./Events";
+import Sponsors from "./Sponsors";
+import Partners from "./Partners";
 
 export default function FaqPage() {
   const [open, setOpen] = useState(-1);
@@ -58,7 +61,10 @@ export default function FaqPage() {
       </section>
 
     </main>
-          <Footer />  
+      <Events />
+      <Sponsors />
+      <Partners />  
+      <Footer />  
 
     </>
   );

@@ -1,15 +1,11 @@
 {
   "name": "afrifest-react-starter",
-  "homepage": "https://wally-devking.github.io/afrifest-react-starter/",
   "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "test": "react-scripts test",
     "preview": "vite preview"
   },
   "dependencies": {

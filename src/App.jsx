@@ -13,7 +13,6 @@ import Marquee from './components/Marquee.jsx'
 import PartnersSection from './components/PartnersSection.jsx'
 import FaqHome from './components/FaqHome.jsx'
 
-
 export default function App() {
   return (
     <>
@@ -21,17 +20,19 @@ export default function App() {
       <Navbar />
       <Hero />
       <About />
+      <PartnersSection />
       <Gallery />
       <Merch />
       <Events />
       <Marquee />
       <Parallax />
       <MapSection />
-      <PartnersSection />
       <FaqHome />
       <Sponsors />
       <Partners />
       <Footer />
+
+
     </>
   )
 }

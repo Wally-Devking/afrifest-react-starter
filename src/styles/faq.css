@@ -16,23 +16,24 @@ text-align:center;
 }
 
 .faq-section{
-
   position:relative;
   padding:clamp(32px,5vw,72px) 0;
   background:
     radial-gradient(900px 300px at 10% -10%, rgba(255,255,255,.06), transparent 60%),
     radial-gradient(900px 300px at 90% -20%, rgba(255,255,255,.05), transparent 60%);
+      background: #6b1e00;
+
 }
 
 .faq-header{ text-align:center; margin:0 auto clamp(16px,2.5vw,28px); max-width:820px; }
 .faq-title{
-  font-size:clamp(24px,2.4vw,42px);
-  background:linear-gradient(90deg,var(--faq-accent-1),var(--faq-accent-2));
+  font-size:clamp(28px,2.4vw,42px);
+  background: linear-gradient(90deg,var(--faq-accent-1),var(--faq-accent-2));
   -webkit-background-clip:text; background-clip:text; color:transparent;
   font-weight:700;
 
 }
-.faq-subtitle{ color:var(--faq-muted); margin-top:8px; font-size:clamp(1rem,1.6vw,15px);
+.faq-subtitle{ color: white; margin-top:8px; font-size:clamp(1rem,1.6vw,15px);
 text-transform:uppercase;
 }
 
@@ -47,18 +48,18 @@ text-transform:uppercase;
   
   position:relative;
   border-radius:16px;
-  background:var(--faq-card-bg);
+  background:white;
   border:1px solid var(--faq-border);
   backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
   overflow:hidden;
   transition:border-color .25s ease, transform .2s ease, box-shadow .25s ease, background .25s ease;
-  box-shadow:0 10px 30px rgba(0,0,0,.28);
+  box-shadow:0 10px 30px rgba(0, 0, 0, 0.67);
 
 }
 .faq-item:hover{
   transform:translateY(-2px);
   box-shadow:0 10px 30px rgba(0,0,0,.28);
-  background:var(--faq-card-hover);
+  background:white;
 }
 /* subtle gradient edge */
 .faq-item::before{
@@ -109,13 +110,16 @@ text-transform:uppercase;
 .faq-a p{ margin:0; }
 
 /* See more button row */
-.faq-actions{ display:flex; justify-content:center; margin-top:20px; 
+.faq-actions{ 
+  display:flex; 
+  justify-content:center; 
+  margin-top:20px; 
 }
 
 /* Responsive tweaks */
 @media (max-width:768px){
 .faq-section{
-    padding:clamp(24px,6vw,48px) 16px;
+  padding:clamp(24px,6vw,48px) 16px;
   .faq-list{ gap:10px; }
   .faq-q{ padding:16px 14px; }
   .faq-a{ padding:0 14px 14px; font-size:14px; }

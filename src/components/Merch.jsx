@@ -5,14 +5,17 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import '../styles/merch.css'
 
+
 const items = [
-  { src:'/src/assets/images/ppa.jpeg', name:'Afrifest Polo',    tag:'New' },
-  { src:'/src/assets/images/ppb.jpeg', name:'Afrifest Cap',     tag:'Best Seller' },
-  { src:'/src/assets/images/ppc.jpeg', name:'Las Gidi Polo',    tag:'Limited' },
-  { src:'/src/assets/images/ppd.jpeg', name:'Afrifest T-shirt', tag:'Hot' },
-  { src:'/src/assets/images/ppe.jpeg', name:'Afrifest Mask',    tag:'Limited' },
-  { src:'/src/assets/images/ppf.jpeg', name:'Afrifest Hoodie',  tag:'New' },
-]
+  // { src: '/images/afe2.jpg', name: 'Afrifest Polo',     tag: 'New',      link: 'https://lasgidi.co.uk/product/classic-unisex-pullover-hoodie-2/' },
+  { src: '/images/afe1.jpg', name: 'Afrifest Top',      tag: 'New',      link: 'https://lasgidi.co.uk/product/classic-unisex-pullover-hoodie/' },
+  { src: '/images/afe3.jpg', name: 'Las Gidi Bag',      tag: 'Limited',  link: 'https://lasgidi.co.uk/product/classic-tote-bag-3/' },
+  { src: '/images/afe4.jpg', name: 'Afrifest T-shirt',  tag: 'Hot',      link: 'https://lasgidi.co.uk/product/organic-in-conversion-unisex-t-shirt/' },
+  { src: '/images/afe5.jpg', name: 'Afrifest Bag',      tag: 'Limited',  link: 'https://lasgidi.co.uk/product/classic-tote-bag-2/' }, // removed leading '/'
+  { src: '/images/afe6.webp',name: 'Afrifest Hoodie',   tag: 'Limited',  link: 'https://lasgidi.co.uk/product/classic-unisex-pullover-hoodie-gildan-18500/' },
+];
+
+
 
 export default function Merch(){
   return (
@@ -25,7 +28,7 @@ export default function Merch(){
       <div className="merch-slider2">
         <Swiper
           modules={[Autoplay, Navigation, Pagination]}
-          grabCursor
+          cursor="pointer"
           centeredSlides={false}
           slidesPerView={4}
           spaceBetween={20}
@@ -41,22 +44,28 @@ export default function Merch(){
             1024: { slidesPerView:4,   spaceBetween:20 }
           }}
         >
-          {items.map((it,idx)=>(
-            <SwiperSlide key={idx}>
-              <div className="merch-item2">
-                {it.tag && <span className="merch-badge" aria-hidden="true">{it.tag}</span>}
-                <div className="merch-image-wrap">
-                  <img src={it.src} alt={it.name} loading="lazy" />
-                </div>
-                <p className="item-name">{it.name}</p>
-                <div className="merch-cta-row" aria-hidden="true">
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
+         {items.map((it, idx) => (
+  <SwiperSlide key={idx}>
+    <a
+      href={it.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={(e) => e.stopPropagation()} // make sure Swiper doesn't swallow the click
+    >
+      <div className="merch-item2">
+        {it.tag && <span className="merch-badge" aria-hidden="true">{it.tag}</span>}
+        <div className="merch-image-wrap">
+          <img src={it.src} alt={it.name} loading="lazy" />
+        </div>
+        <p className="item-name">{it.name}</p>
+        <div className="merch-cta-row" aria-hidden="true"></div>
+      </div>
+    </a>
+  </SwiperSlide>
+))}
         </Swiper>
       </div>
-
+{/* 
       <div className="events-btn-wrapper">
         <a
           href="https://www.tiktok.com/@lagos_night_uk?_t=ZN-90EqrWrlYd4&_r=1"
@@ -65,7 +74,7 @@ export default function Merch(){
         >
           Get Merch
         </a>
-      </div>
+      </div> */}
     </section>
   )
 }

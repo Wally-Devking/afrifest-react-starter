@@ -14,8 +14,8 @@
   height: 300px;
 }
 .partners-wave path{
-  fill: #fff;
-  opacity: .98;
+  fill: #6b1e00!important;
+  opacity: 1;
 }
 
 .about-inner {
@@ -30,7 +30,7 @@
 
 /* Headings & text */
 .about h2 {
-  color: var(--dark);
+  color: #6b1e00;
   font-size: 2rem;
   margin-bottom: 10px;
   font-weight: 700;

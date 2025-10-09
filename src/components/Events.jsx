@@ -12,18 +12,18 @@ export default function Events(){
         <div className="events-grid">
           <div className="event-card">
             <img src="https://img.icons8.com/ios-filled/100/dancing.png" alt="Dance" />
-            <h3>Dance</h3>
+            <h3>Music</h3>
             <p>Showcasing African rhythm and movement.</p>
           </div>
           <div className="event-card">
-            <img src="src/assets/images/culture.jpeg" alt="Culture" />
+            <img src="/images/culture.jpeg" alt="Culture" />
             <h3>Culture</h3>
             <p>Heritage from across Africa.</p>
           </div>
           <div className="event-card">
             <img src="https://img.icons8.com/ios-filled/100/paint-palette.png" alt="Arts" />
             <h3>Arts</h3>
-            <p>From paintings to crafts.</p>
+            <p>From Spoken words, Poetry, Poems, Paintings & crafts.</p>
           </div>
           <div className="event-card">
             <img src="https://img.icons8.com/ios-filled/100/restaurant.png" alt="Food" />
@@ -36,7 +36,7 @@ export default function Events(){
             <p>Traditional displays of art, mystery, and performance.</p>
           </div>
           <div className="event-card">
-            <img src="src/assets/images/games.png" alt="Games" />
+            <img src="/images/games.png" alt="Games" />
             <h3>Games</h3>
             <p>Fun, interactive African games for all ages to enjoy.</p>
             

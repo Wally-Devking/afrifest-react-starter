@@ -6,7 +6,7 @@ import Marquee from "./Marquee";
 import Sponsors from "./Sponsors";
 import Partners from "./Partners";
 import Events from "./Events";
-import contact_jpg from "../assets/images/contact.jpg";
+import contact_jpg from "/images/contact.jpg";
 
 
 export default function Contact() {

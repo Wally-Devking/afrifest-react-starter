@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
-import havlogo_png from "../assets/images/havlogo.png";
+import havlogo_png from "/images/havlogo.png";
 
 
 
@@ -10,6 +10,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
+  
 
   // Close on outside click
   useEffect(() => {
@@ -66,7 +67,7 @@ export default function Navbar() {
       >
 
         <li role="none"><a role="menuitem" a href="/#about">About</a></li>
-        <li role="none"><a role="menuitem" a href="/pressrelease">Press Release</a></li>
+        {/* <li role="none"><a role="menuitem" a href="/pressrelease">Press Release</a></li> */}
         <li role="none"><a role="menuitem" a href="/contact">Contact Us</a></li>
         <li role="none"><a role="menuitem" a href="/faq">FAQs</a></li>
 <li role="none">

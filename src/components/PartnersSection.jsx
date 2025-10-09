@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/Partnersection.css";
-import footerlogo_png from "../assets/images/footerlogo.png";
+import footerlogo_png from "/images/footerlogo.png";
 
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xkgobnvj";
 
 
 export default function PartnersSection({
-  title = "Become a Sponsor | Partner",
+  title = "Work with Afrifest",
   subtitle = `Help us celebrate African culture in the UK while growing your brand with our real community impact.
   Look, There is still a slot for you to fill!`,
   
@@ -28,7 +28,6 @@ export default function PartnersSection({
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
-
 
 
 const handleSubmit = async (e) => {
@@ -95,7 +94,7 @@ const handleSubmit = async (e) => {
         {/* Mobile single image on the right (optional) */}
         {/* <div className="mobile-tile"><img src="/images/afrifest-logo.png" alt="" /></div> */}
 
-        <svg className="partners-wave" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+        <svg className="partners-wave2" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
           <path d="M0,120 C280,200 560,0 840,80 C1080,145 1260,150 1440,110 L1440,220 L0,220 Z" />
         </svg>
       </div>
@@ -112,7 +111,7 @@ const handleSubmit = async (e) => {
         >
           <div className="modal">
             <button className="modal-close" aria-label="Close form" onClick={() => setOpen(false)}>×</button>
-            <h3 id="partnerFormTitle">Sponsor|Partner with Afrifest</h3>
+            <h3 id="partnerFormTitle">Work with Afrifest</h3>
             <p className="modal-sub">Tell us a bit about your brand and goals. We’ll be in touch ASAP.</p>
 
             <form onSubmit={handleSubmit} className="form-grid">
@@ -124,9 +123,12 @@ const handleSubmit = async (e) => {
                 Partnership Type*
                 <select name="type" required defaultValue="">
                   <option value="" disabled>Select an option</option>
-                  <option>Title Sponsor</option><option>Gold Sponsor</option>
-                  <option>Silver Sponsor</option><option>Community Partner</option>
-                  <option>Media Partner</option><option>Vendor / On-site Activation</option>
+                  <option>Sponsor</option>
+                 <option>Community Partner</option>
+                  <option>Media Partner</option>
+                  <option>Vendor/ On-site Activation</option>
+                  <option>Volunteer</option>
+
                 </select>
               </label>
               <label className="full">What would you like to achieve?
@@ -145,13 +147,14 @@ const handleSubmit = async (e) => {
 }
 
 const defaultTiles = [
-  { src: "/src/assets/images/parA.jpg", alt: "Smiling woman" },
-  { src: "/src/assets/images/parB.jpg", alt: "Woman with juice" },
-  { src: "/src/assets/images/parC.jpg", alt: "chicken hands" },
-  { src: "/src/assets/images/parD.jpg", alt: "serving man" },
-  { src: "/src/assets/images/parE.jpg", alt: "2 woman" 
+  { src: "/images/DD.jpg", alt: "Smiling woman" },
+  { src: "/images/EE.jpg", alt: "Woman with juice" },
+  { src: "/images/FF.png", alt: "Chicken hands" },
+  { src: "/images/log8.jpg", alt: "Serving man" },
+  { src: "/images/log9.jpg", alt: "Two women" },
+  { src: "/images/log7.jpg", alt: "Man in black" },
+  { src: "/images/CC.png", alt: "Woman in teal" },
+    { src: "/images/BB.png", alt: "Woman in teal" }
 
-  },
-  { src: "/src/assets/images/parF.jpg", alt: "Man in black" },
-  { src: "/src/assets/images/parG.jpg", alt: "Woman in teal" },
 ];
+

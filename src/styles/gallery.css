@@ -1,149 +1,167 @@
+/* =========================
+   AFRIFEST GALLERY — Responsive & Polished
+   (keeps your current Swiper setup/patterns)
+   ========================= */
 .gallery-section {
-  padding: 0px 20px;
+  --slide-w: clamp(240px, 36vw, 340px);
+  --slide-h: clamp(320px, 52vw, 460px);
+  --radius: 24px;                 /* was 70px — more modern and consistent */
+  --shadow: 0 18px 45px rgba(0,0,0,.45);
+  --shadow-active: 0 24px 60px rgba(0,0,0,.55);
+  --shadow-neighbor: 0 14px 32px rgba(0,0,0,.28);
+  --gap: 16px;
+
+  padding: 0 100px;
 }
 
-.gallery-title {
-  display: flex;
-  font-size: 2rem;
+.gallery-title{
+  display:flex; justify-content:center; text-align:center;
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
   font-weight: 700;
-  justify-content: center;
-  text-align: center;
+  margin: 0 0 6px;
 }
 
-.gallery-subtitle {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  font-size: 1rem;
+.gallery-subtitle{
+  display:flex; justify-content:center; text-align:center;
+  margin: 0 0 20px;
+  font-size: clamp(.9rem, 1.6vw, 1rem);
   color: var(--dark);
+  padding: 0 10px;
 }
 
-.gallery-slider {
+.gallery-slider{
   position: relative;
   width: 100%;
-  max-width: 1000px;
-  margin: auto;
+  max-width: min(1000px, 92vw);
+  margin: 0 auto;
+  /* show overlap */
+  overflow: visible !important;
+}
+.gallery-slider .swiper,
+.gallery-slider .swiper-wrapper{
+  overflow: visible !important;
 }
 
-.gallery-slide {
-  width: 300px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+/* Slide sizing (keeps your coverflow overlap intact) */
+.gallery-slide{
+  width: var(--slide-w);
+  height: var(--slide-h);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1; will-change: transform;
 }
 
-.gallery-slide img {
-  width: 100%;
-  height: 100%;
-  border-radius: 16px;
+/* Media inside slide */
+.gallery-slide img,
+.gallery-slide video,
+.gallery-slide .instagram-media{
+  width: 100%; height: 100%;
   object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  outline: 1px solid rgba(255,255,255,.05);
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  background: #000; /* avoids white flash before image loads */
 }
 
-.gallery-caption {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: center;
+/* Active & neighbors for pleasing overlap */
+.swiper-slide-active { z-index: 3; }
+.swiper-slide-active img,
+.swiper-slide-active video{
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-active);
+  filter: saturate(1.06) contrast(1.02);
+}
+.swiper-slide-prev img,
+.swiper-slide-next img{
+  box-shadow: var(--shadow-neighbor);
 }
 
-/* Swiper controls */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #ffffff;
-  font-weight: bold;
+
+
+/* Controls */
+.swiper-button-next, .swiper-button-prev{
+  color: #fff; font-weight: 700;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+}
+.swiper-pagination-bullet{
+  background: #ff3036; opacity: .7;
+}
+.swiper-pagination-bullet-active{
+  background: #ff3036; opacity: 1; transform: scale(1.12);
 }
 
-.swiper-pagination-bullet {
-  background: #ff3036;
+/* ======= Breakpoints (keeps pattern, just adapts size/spacing) ======= */
+
+/* Large tablets / smaller laptops */
+@media (max-width: 1200px){
+  .gallery-section{ --slide-w: clamp(230px, 38vw, 320px); --slide-h: clamp(300px, 54vw, 440px); }
 }
 
-/* === MOBILE DISPLAY SUPPORT (no size changes) === */
-@media (max-width: 768px) {
-  .gallery-section {
-    padding: 0px 15px; 
-    
-  }
-
-  .gallery-slide img {
-  width: 90%;
-  height: 90%;
+/* Tablets */
+@media (max-width: 992px){
+  .gallery-section{ --slide-w: clamp(220px, 44vw, 300px); --slide-h: clamp(300px, 60vw, 420px); }
 }
 
-  .gallery-slider {
-    overflow: hidden;   /* ensures no horizontal scroll */
-  }
-
-  .gallery-slide {
-    flex: 0 0 auto;     /* slides remain fixed size */
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery-section {
-    padding: 0px 10px;
-  }
-
-  .gallery-title {
-  display: flex;
-  font-size: 2rem;
-  font-weight: 700;
-  justify-content: center;
-  text-align: center;
-}
-
-.gallery-subtitle {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: 1rem;
-  color: var(--dark);
-  padding: 0px 20px;
-
-}
-}
-
-/* === Mobile only: remove slider shadow overlays === */
+/* Large phones / small tablets */
 @media (max-width: 768px){
-  /* Swiper (coverflow/3D) shadows */
-  .swiper-slide-shadow-left,
-  .swiper-slide-shadow-right,
-  .swiper-3d .swiper-slide-shadow-left,
-  .swiper-3d .swiper-slide-shadow-right{
-    display: none !important;
-    opacity: 0 !important;
+  .gallery-section{ padding: 0 14px; --gap: 14px; }
+  .gallery-slider, .gallery-slider .swiper, .gallery-slider .swiper-wrapper{ overflow: visible !important; }
+  .swiper-button-next, .swiper-button-prev{ display: none; } /* cleaner mobile UI */
+  .gallery-caption{ bottom: 10px; font-size: .9rem; padding: 6px 10px; }
+}
+
+/* Small phones */
+@media (max-width: 480px){
+  .gallery-section{ padding: 0 10px; }
+  .gallery-subtitle{ padding: 0 12px; }
+  .gallery-caption{ bottom: 8px; font-size: .85rem; }
+}
+
+/* Accessibility / motion */
+@media (prefers-reduced-motion: reduce){
+  .gallery-slide img,
+  .gallery-slide video{
+    transition: none;
+  }
+}
+
+
+/* On small screens, a bit tighter */
+@media (max-width: 480px){
+  .gallery-section{ --gutter: 16px; }
+}
+
+/* === Mobile: show next/prev buttons with big tap targets === */
+@media (max-width: 768px){
+  /* your earlier CSS hid them; turn them back on */
+  .swiper-button-next,
+  .swiper-button-prev{
+    display: flex !important;        /* was none */
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(197, 192, 192, 0.4);
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,.35);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+    z-index: 5;
   }
 
-  /* Slick edges/fade masks */
-  .slick-list::before,
-  .slick-list::after{
-    content: none !important;
-    display: none !important;
+  /* arrow icons size */
+  .swiper-button-next::after,
+  .swiper-button-prev::after{
+    font-size: 18px;
   }
 
-  /* In case you added your own fades on the gallery */
-  .gallery-slider::before,
-  .gallery-slider::after,
-  .gallery-slide::before,
-  .gallery-slide::after{
-    content: none !important;
-    display: none !important;
-  }
-
-  /* Prevent grey strips from any mask/gradient on small screens */
+  /* place them comfortably inside the slider */
+  .swiper-button-prev{ left: 12px; }
+  .swiper-button-next{ right: 12px; }
   .gallery-slider,
-  .swiper,
-  .slick-list{
-    -webkit-mask-image: none !important;
-    mask-image: none !important;
-    background: transparent !important;
+  .gallery-slider .swiper,
+  .gallery-slider .swiper-wrapper{
+    overflow: visible !important; /* keep overlap visible */
   }
 }

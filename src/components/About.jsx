@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
 import '../styles/about.css'
-import Child_jpg from "../assets/images/Child.jpg";
-import mask_jpg from "../assets/images/mask.jpg";
-import b3_jpg from "../assets/images/b3.jpg";
-import legs_jpg from "../assets/images/legs.jpg";
+import Child_jpg from "/images/Child.jpg";
+import mask_jpg from "/images/mask.jpg";
+import b3_jpg from "/images/b3.jpg";
+import legs_jpg from "/images/legs.jpg";
 
 
 export default function About(){
@@ -14,7 +14,7 @@ export default function About(){
     let observer = new IntersectionObserver(entries => {
       entries.forEach(entry=>{
         if(entry.isIntersecting){
-          animateCounter(counterRef.current, 1500, 1500)
+          animateCounter(counterRef.current, 5000, 4000)
           observer.disconnect()
         }
       })
@@ -63,6 +63,7 @@ export default function About(){
           <img src={legs_jpg} alt="Community support" />
         </div>
       </div>
+
 {/* above wave */}
        <svg className="partners-wave" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
           <path d="M0,120 C280,200 560,0 840,80 C1080,145 1260,150 1440,110 L1440,220 L0,220 Z" />
