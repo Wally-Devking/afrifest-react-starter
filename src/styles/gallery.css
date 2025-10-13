@@ -1,7 +1,4 @@
-/* =========================
-   AFRIFEST GALLERY — Responsive & Polished
-   (keeps your current Swiper setup/patterns)
-   ========================= */
+
 .gallery-section {
   --slide-w: clamp(240px, 36vw, 340px);
   --slide-h: clamp(320px, 52vw, 460px);
@@ -12,20 +9,24 @@
   --gap: 16px;
 
   padding: 0 100px;
+    overflow-x: hidden;
+
 }
 
 .gallery-title{
   display:flex; justify-content:center; text-align:center;
-  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  font-size: clamp(2.5rem, 2.2vw, 2rem);
   font-weight: 700;
   margin: 0 0 6px;
 }
 
 .gallery-subtitle{
-  display:flex; justify-content:center; text-align:center;
+  display:flex; 
+  justify-content:center; 
+  text-align:center;
   margin: 0 0 20px;
   font-size: clamp(.9rem, 1.6vw, 1rem);
-  color: var(--dark);
+  color: #6b1e00;
   padding: 0 10px;
 }
 

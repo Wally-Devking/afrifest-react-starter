@@ -1,17 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/Partnersection.css";
-import footerlogo_png from "/images/footerlogo.png";
+import afrilogo from "/images/afrilogo2.png";
 
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xkgobnvj";
 
 
 export default function PartnersSection({
-  title = "Work with Afrifest",
+  title = "Work with Us",
   subtitle = `Help us celebrate African culture in the UK while growing your brand with our real community impact.
   Look, There is still a slot for you to fill!`,
   
-  ctaText = "Click to Join Us",
+  ctaText = "Get in Touch",
   onSubmit,
   logoGrid = [],
 }) {
@@ -84,7 +84,7 @@ const handleSubmit = async (e) => {
         {/* Right-side collage (desktop). Keep or replace with your tiles */}
         <div className="partners-collage">
           <div className="collage-grid">
-            <div className="tile tile-center"><span className="pepper" aria-hidden="true"><img src={footerlogo_png} alt="" /></span></div>
+            <div className="tile tile-center"><span className="pepper" aria-hidden="true"><img src={afrilogo} alt="" /></span></div>
             {(logoGrid.length ? logoGrid : defaultTiles).map((t, i) => (
               <div className="tile" key={i}><img src={t.src} alt={t.alt} loading="lazy" /></div>
             ))}
@@ -111,14 +111,14 @@ const handleSubmit = async (e) => {
         >
           <div className="modal">
             <button className="modal-close" aria-label="Close form" onClick={() => setOpen(false)}>×</button>
-            <h3 id="partnerFormTitle">Work with Afrifest</h3>
+            <h3 id="partnerFormTitle">Work with Us</h3>
             <p className="modal-sub">Tell us a bit about your brand and goals. We’ll be in touch ASAP.</p>
 
             <form onSubmit={handleSubmit} className="form-grid">
               <label>Full Name*<input ref={firstFieldRef} type="text" name="name" required /></label>
               <label>Company / Brand*<input type="text" name="company" required /></label>
               <label>Email*<input type="email" name="email" required /></label>
-              <label>Phone / WhatsApp<input type="tel" name="phone" /></label>
+              <label>Phone*/ WhatsApp<input type="tel" name="phone" /></label>
               <label className="full">
                 Partnership Type*
                 <select name="type" required defaultValue="">
@@ -147,11 +147,11 @@ const handleSubmit = async (e) => {
 }
 
 const defaultTiles = [
-  { src: "/images/DD.jpg", alt: "Smiling woman" },
+  { src: "/images/log9.jpg", alt: "Smiling woman" },
   { src: "/images/EE.jpg", alt: "Woman with juice" },
   { src: "/images/FF.png", alt: "Chicken hands" },
   { src: "/images/log8.jpg", alt: "Serving man" },
-  { src: "/images/log9.jpg", alt: "Two women" },
+  { src: "/images/DD.jpg", alt: "Two women" },
   { src: "/images/log7.jpg", alt: "Man in black" },
   { src: "/images/CC.png", alt: "Woman in teal" },
     { src: "/images/BB.png", alt: "Woman in teal" }

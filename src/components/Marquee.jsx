@@ -3,9 +3,11 @@ import '../styles/marquee.css';
 const texts = [
   'We Are Afri-fest',
   'Next Event Loading... 15th August 2026',
-  'Dont Miss Out!!!',
+  "Don't Miss Out!!!",
+  'Be a Sponsor | Partner',
   'Come Let Us Celebrate Africa Together',
-  'Ticket On Sale Now',
+  'Ticket Now On Sale',
+
 ];
 
 export default function Marquee() {
@@ -17,8 +19,8 @@ export default function Marquee() {
       <div className="marquee__track">
         {items.map((text, i) => (
           <div
-            className={`marquee__item ${text === 'Ticket On Sale Now' ? 'marquee__item--alert' : ''}`}
-            key={i}
+className={`marquee__item ${text === 'Ticket Now On Sale' ? 'marquee__item--alert' : ''}`}
+
           >
             {text}
           </div>

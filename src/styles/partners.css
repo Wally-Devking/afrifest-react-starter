@@ -1,5 +1,4 @@
 .partners-section {
-  background: #fff;
   padding: 40px 20px;
   text-align: center;
 }
@@ -16,6 +15,9 @@
   transform: scale(1.05);
 }
 
+.section-title{
+  color: #00a01a
+}
 /* === RESPONSIVE BREAKPOINTS === */
 
 /* Tablets */
@@ -32,27 +34,29 @@
     height: 50px;
     margin: 8px;
   }
+  .section-title{
+    margin-top: 2px;
+}
 }
 
-/* Small phones */
 @media (max-width: 480px) {
   .partner-logo {
     height: 60px;
     margin: 6px;
   }
 }
-//* ==== Mobile logo normalization & alignment (append at end) ==== */
 @media (max-width: 768px){
   .partners-section{
-        text-align: center; /* center inline-block logos */
+        text-align: center;
   }
 
   .partners-section .partners-logo{
-    width: 150px !important;   /* uniform box */
+    width: 150px !important;   /* uniform
     height: 150px !important;   /* uniform box */
     margin: 0px 0px !important;
     display: inline-block;
     object-fit: contain;        /* no distortion */
     vertical-align: middle;
   }
+
 }

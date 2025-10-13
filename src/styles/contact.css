@@ -7,9 +7,16 @@
   --ring:rgba(255,48,54,.25);
 }
 
-.container{ max-width:1200px; margin:0 auto; padding:0 20px; }
+.container{ 
+  max-width:1200px; margin:0 auto; padding:0 20px; 
+    overflow-x: hidden;
 
-.contact{ background:var(--bg); color:var(--ink); }
+}
+
+.contact{ 
+  background-image:url('/images/BGyellow.png');
+    overflow-x: hidden;
+   color:var(--ink); }
 
 /* Header band */
 .contact__hero{
@@ -22,7 +29,7 @@
   margin: 0 0 6px;
 }
 .contact__hero p{
-  margin: 0; color: var(--muted);
+  margin: 0; color: var(--ink);
 }
 
 /* === New two-column section === */

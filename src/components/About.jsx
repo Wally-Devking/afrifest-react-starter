@@ -34,12 +34,16 @@ export default function About(){
   }
 
   return (
-    <section className="about" id="about">
-      <div className="about-inner">
+    <>
+  <section className="tear-img tear-top" style={{ "--tear-h": "78px", zIndex: "1", background: "#070301ff" }}></section>
+
+      <section className="about" id="about">
+
+        <div className="about-inner">
         <div>
           <h2>Who We Are</h2>
-          <p><strong>Afri-Fest East</strong> is the first-of-its kind and largest Afrocentric summer event in East Anglia.
-          We aim to fill a noticeable gap in the outdoor entertainment space, catering to a diverse audience.</p>
+          <p><strong>Afri-Fest East</strong> is  the first-of-its  kind and largest Afrocentric summer event in East  Anglia.
+          <br />We aim to fill a noticeable gap in the outdoor entertainment space, catering to a diverse audience.</p>
           <p>Our goal is to promote and celebrate African culture through music, food, and dance, ultimately improving cohesion and integration with various communities in East Anglia.</p>
           <p>Our event will include live performances from artists, engaging kid’s activities, workshops, and African-inspired cuisine. Afri-Fest also offers unique opportunities to promote both local, small, and medium-scale businesses.</p>
 
@@ -69,5 +73,6 @@ export default function About(){
           <path d="M0,120 C280,200 560,0 840,80 C1080,145 1260,150 1440,110 L1440,220 L0,220 Z" />
         </svg>
     </section>
+    </>
   )
 }

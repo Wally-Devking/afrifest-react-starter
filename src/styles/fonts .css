@@ -17,7 +17,18 @@
   font-display: swap;
 }
 
-/* Apply globally */
-html, body {
-  font-family: "Crazy Sixties", system-ui, sans-serif;
+//* Register Gobold Lowplus */
+@font-face {
+  font-family: "Gobold Lowplus";
+  src: url("/fonts/gobold-lowplus.woff2") format("woff2"),
+       url("/fonts/gobold-lowplus.woff")  format("woff");
+  font-weight: 400;       /* change/add more @font-face blocks if you have 500/700, etc. */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply to all paragraphs */
+p, body p {
+  font-family: "Gobold Lowplus", system-ui, sans-serif;
+  font-weight: 400;       /* use 700 only if you actually have a bold file */
 }

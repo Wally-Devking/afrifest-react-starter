@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import havlogo_png from "/images/havlogo.png";
 
 
-
-
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
@@ -42,13 +40,14 @@ export default function Navbar() {
   const closeAndScroll = () => setOpen(false);
 
   return (
-    <nav className="navbar">
+
+    <><nav className="navbar">
       <div className="logo">
-        
-    <Link to="/" aria-label="Go home">
-      <img src={havlogo_png} alt="Logo" />
-    </Link>
-      
+
+        <Link to="/" aria-label="Go home">
+          <img src={havlogo_png} alt="Logo" />
+        </Link>
+
       </div>
 
 
@@ -61,30 +60,30 @@ export default function Navbar() {
         onClick={(e) => {
           // If a link inside the menu is clicked, close the menu
           if (e.target.tagName === "A" || e.target.closest("a")) closeAndScroll();
-        }}
+        } }
         role="menu"
         aria-hidden={!open}
       >
 
-        <li role="none"><a role="menuitem" a href="/#about">About</a></li>
+        <li role="none"><a role="menuitem" href="/#about">About</a></li>
         {/* <li role="none"><a role="menuitem" a href="/pressrelease">Press Release</a></li> */}
-        <li role="none"><a role="menuitem" a href="/contact">Contact Us</a></li>
-        <li role="none"><a role="menuitem" a href="/faq">FAQs</a></li>
-<li role="none">
-  <button
-    className="btn rounded-pill"
-    type="button"
-    onClick={() => window.open(
-      "https://www.tiktok.com/@lagos_night_uk?_t=ZN-90EqrWrlYd4&_r=1",
-      "_blank",
-      "noopener,noreferrer"
-    )}
-  >
-    Our Merch
-  </button>
-</li>
+        <li role="none"><a role="menuitem" href="/contact">Contact Us</a></li>
+        <li role="none"><a role="menuitem" href="/faq">FAQs</a></li>
+        <li role="none">
+          <button
+            className="btn rounded-pill"
+            type="button"
+            onClick={() => window.open(
+              "https://www.tiktok.com/@lagos_night_uk?_t=ZN-90EqrWrlYd4&_r=1",
+              "_blank",
+              "noopener,noreferrer"
+            )}
+          >
+            Buy Tickets
+          </button>
+        </li>
 
-   
+
       </ul>
 
 
@@ -99,5 +98,8 @@ export default function Navbar() {
         <span></span><span></span><span></span>
       </button>
     </nav>
+    <section className="tear-img tear-top" style={{ "--tear-h": "38px", zIndex: "100", background: "#ffffffff" }}></section></>
+
   );
+
 }

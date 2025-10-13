@@ -1,12 +1,13 @@
 .footer{
-  padding: 40px 0 20px;
+  padding: 80px 0 20px;
   color: #fff;
  background:
-    linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.64)),  /* adjust .35 */
+    linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.77)),  /* adjust .35 */
     url("/images/joinUs.png") center / cover no-repeat;  
     background-size: cover;
   background-position: center;
-  border-radius: 50px 50px 0 0;
+    overflow-x: hidden;
+
 
 }
 
@@ -41,3 +42,5 @@
 .footer-divider{border-color:#fcaf23}
 .dev-link{color:#fcaf23; font-weight:600}
 .dev-link:hover{text-decoration:underline}
+
+

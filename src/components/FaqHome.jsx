@@ -12,7 +12,7 @@ export default function FaqHome({ seeMoreTo = "/faq" }) {
     },
     {
       q: "Is Afrifest family-friendly?",
-      a: "Yes. Afrifest is designed for everyone—kids, teens, adults and elders—with family zones, security, games, learning spaces, and accessible facilities."
+      a: "Yes. Afrifest is designed for everyone—kids, teens, adults —with kids zones, games, learning spaces, and accessible facilities."
     },
     {
       q: "How do I buy tickets?",

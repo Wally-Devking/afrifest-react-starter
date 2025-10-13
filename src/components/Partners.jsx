@@ -1,5 +1,4 @@
 import '../styles/partners.css'
-import log3_jpg from "/images/log3.jpg";
 
 
 export default function Partners(){
@@ -16,9 +15,8 @@ export default function Partners(){
             <img src="/images/afk.png" alt="Partner 1" className="partner-logo img-fluid" style={{width:'300px', height:'150px'}} />
           </div>
           <div className="col-6 col-md-3 col-lg-2 text-center">
-            <img src={log3_jpg} alt="Partner 2" className="partner-logo img-fluid" />
+            <img src="/images/DD.jpg" alt="Partner 3" className="partner-logo img-fluid" />
           </div>
-
           <div className="col-6 col-md-3 col-lg-2 text-center">
             <img src="/images/AA.jpg" alt="Partner 4" className="partner-logo img-fluid" />
           </div>

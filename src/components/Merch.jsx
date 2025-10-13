@@ -19,10 +19,10 @@ const items = [
 
 export default function Merch(){
   return (
-    <section className="merch-section2">
+    <><section className="merch-section2">
       <div className="merch-header">
         <h2 className="merch-title">Get the Merch</h2>
-        <p className="merch-subtitle">STAY VIBRANT WITH OUR EXCLUSIVE BRAND MERCH</p>
+        <p className="merch-subtitle">Stay vibrant with our exclusive brand merch</p>
       </div>
 
       <div className="merch-slider2">
@@ -32,49 +32,53 @@ export default function Merch(){
           centeredSlides={false}
           slidesPerView={4}
           spaceBetween={20}
-          autoplay={{ delay:3500, disableOnInteraction:false }}
-          pagination={{ clickable:true }}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
           navigation
           loop
           speed={650}
           breakpoints={{
-            0:    { slidesPerView:1.2, spaceBetween:14 },
-            480:  { slidesPerView:2,   spaceBetween:16 },
-            768:  { slidesPerView:3,   spaceBetween:18 },
-            1024: { slidesPerView:4,   spaceBetween:20 }
+            0: { slidesPerView: 1.2, spaceBetween: 14 },
+            480: { slidesPerView: 2, spaceBetween: 16 },
+            768: { slidesPerView: 3, spaceBetween: 18 },
+            1024: { slidesPerView: 4, spaceBetween: 20 }
           }}
         >
-         {items.map((it, idx) => (
-  <SwiperSlide key={idx}>
-    <a
-      href={it.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={(e) => e.stopPropagation()} // make sure Swiper doesn't swallow the click
-    >
-      <div className="merch-item2">
-        {it.tag && <span className="merch-badge" aria-hidden="true">{it.tag}</span>}
-        <div className="merch-image-wrap">
-          <img src={it.src} alt={it.name} loading="lazy" />
-        </div>
-        <p className="item-name">{it.name}</p>
-        <div className="merch-cta-row" aria-hidden="true"></div>
-      </div>
-    </a>
-  </SwiperSlide>
-))}
+          {items.map((it, idx) => (
+            <SwiperSlide key={idx}>
+              <a
+                href={it.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()} // make sure Swiper doesn't swallow the click
+              >
+                <div className="merch-item2">
+                  {it.tag && <span className="merch-badge" aria-hidden="true">{it.tag}</span>}
+                  <div className="merch-image-wrap">
+                    <img src={it.src} alt={it.name} loading="lazy" />
+                  </div>
+                  <p className="item-name">{it.name}</p>
+                  <div className="merch-cta-row" aria-hidden="true"></div>
+                </div>
+              </a>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
-{/* 
-      <div className="events-btn-wrapper">
-        <a
-          href="https://www.tiktok.com/@lagos_night_uk?_t=ZN-90EqrWrlYd4&_r=1"
-          target="_blank" rel="noreferrer"
-          className="hero-btn"
-        >
-          Get Merch
-        </a>
-      </div> */}
-    </section>
+      {/*
+          <div className="events-btn-wrapper">
+            <a
+              href="https://www.tiktok.com/@lagos_night_uk?_t=ZN-90EqrWrlYd4&_r=1"
+              target="_blank" rel="noreferrer"
+              className="hero-btn"
+            >
+              Get Merch
+            </a>
+          </div> */}
+
+    </section><section className="tear-img tear-top" style={{ "--tear-h": "48px", zindex: "1", background: "#ffb730ff" }}>
+      </section></>
   )
 }
+    
+

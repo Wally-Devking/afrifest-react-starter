@@ -41,9 +41,9 @@ export default function GalleryReels() {
   }, []);
 
   return (
-    <section className="gallery-section">
+    <><section className="gallery-section">
       <h2 className="gallery-title">Our Visual Journey</h2>
-      <p className="gallery-subtitle">WE HAVE DONE IT OVER THE YEARS – VISIT OUR IG PAGE FOR MORE.</p>
+      <p className="gallery-subtitle">We have done it over the year – Visit our IG page for more.</p>
 
       <div className="gallery-slider">
         <Swiper
@@ -54,11 +54,13 @@ export default function GalleryReels() {
           slidesPerView="auto"
           navigation
           loop
-          coverflowEffect={{ rotate: 30, 
-            stretch: 0, 
-            depth: 150, 
-            modifier: 1, 
-            slideShadows: true }}
+          coverflowEffect={{
+            rotate: 30,
+            stretch: 0,
+            depth: 150,
+            modifier: 1,
+            slideShadows: true
+          }}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
         >
@@ -79,13 +81,15 @@ export default function GalleryReels() {
                   minWidth: 220,
                   maxWidth: 340,
                   width: "100%",
-                }}
-              />
-             
+                }} />
+
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-    </section>
-  );
-}
+        </section>
+        <section className="tear-img tear-top" style={{ "--tear-h": "78px", zIndex: "10", background: "#ffffffff" }}>
+        </section>
+        </>
+      );
+    }

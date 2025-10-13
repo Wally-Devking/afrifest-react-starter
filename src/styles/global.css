@@ -1,8 +1,10 @@
-*{box-sizing:border-box}
-:root { --brand-font: "Crazy Sixties", system-ui, sans-serif; }
-body  { font-family: var(--brand-font); }
 
+* { box-sizing: border-box; }
+:root { --brand-font: "Crazy Sixties", system-ui, sans-serif; 
 
+}
+
+/* ---------- Font faces (put your files in /public/fonts/) ---------- */
 @font-face {
   font-family: "Crazy Sixties";
   src: url("/fonts/CrazySixties.woff2") format("woff2"),
@@ -12,37 +14,84 @@ body  { font-family: var(--brand-font); }
   font-display: swap;
 }
 
-/* Optional outline variant */
 @font-face {
   font-family: "Crazy Sixties Hollow";
-  src: url("../fonts/CrazySixtiesHollow.woff2") format("woff2"),
-       url("../fonts/CrazySixtiesHollow.woff") format("woff");
+  src: url("/fonts/CrazySixtiesHollow.woff2") format("woff2"),
+       url("/fonts/CrazySixtiesHollow.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-
-html,body{
-    margin:0;
-    padding:0;
-  font-family: "Crazy Sixties", system-ui, sans-serif;
-    color:#0f0f0f;
-    overflow-x:hidden}
-a{text-decoration:none
+@font-face{
+  font-family: "Gobold Lowplus";
+  src: url("/fonts/gobold-lowplus.woff2") format("woff2"),
+       url("/fonts/gobold-lowplus.woff")  format("woff");
+  font-weight: 400;   /* match the file’s weight */
+  font-style: normal;
+  font-display: swap;
 }
 
-p{
-  font-family: "Crazy Sixties", system-ui, sans-serif;
-  margin:0;
-    padding:0
+/* apply to all <p> */
+p { font-family: "Gobold Uplow", system-ui, sans-serif; font-weight: 400; }
+
+/* ---------- Base ---------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--brand-font);
+  color: #0f0f0f;
+  overflow-x: hidden;
 }
-ul{margin:0;
-    padding:0;
-    list-style:none
+
+/* Headings (fixed stray comma and scope) */
+h1, h2, h3 {
+  font-family: var(--brand-font);
 }
-img{
-    max-width:100%;
-    display:block;
+
+/* Paragraphs sitewide */
+p, body p {
+  font-family: "Gobold Lowplus", system-ui, sans-serif;
+font-weight: 400; 
+  margin: 0;
+  padding: 0;
 }
-.container{max-width:1100px;margin:0 auto;padding:0 1rem}
+
+/* Common elements */
+a { text-decoration: none; }
+ul { margin: 0; padding: 0; list-style: none; }
+img { max-width: 100%; display: block; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+
+
+
+/* Attach to any section: .tear-img .tear-bottom (or .tear-top) */
+.tear-img { position: relative; }
+
+/* placement */
+.tear-img.tear-bottom::after,
+.tear-img.tear-top::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  padding: 0px;
+  height: var(--tear-h, 56px);     /* control height */
+  pointer-events: none;
+  background: inherit;             /* extend the section’s own background */
+}
+
+.tear-img.tear-bottom::after { bottom: -1px; }
+.tear-img.tear-top::before   { top: -1px; transform: scaleY(-1); }
+
+/* use the torn PNG as a horizontal mask */
+.tear-img.tear-bottom::after,
+.tear-img.tear-top::before {
+  -webkit-mask-image: url("/images/torn-edge.png");
+          mask-image: url("/images/torn-edge.png");
+  -webkit-mask-repeat: repeat-x;
+          mask-repeat: repeat-x;
+  -webkit-mask-position: bottom;
+          mask-position: bottom;
+  -webkit-mask-size: var(--tear-w, 640px) 100%;  /* width of one tile */
+          mask-size: var(--tear-w, 640px) 100%;
+}

@@ -1,6 +1,10 @@
 .events-section{
     padding:3rem 1rem;
     background:#ffffff;
+    overflow-x: hidden;
+
+
+
 }
 .events-header{
     text-align:center;
@@ -13,8 +17,8 @@
 .events-header p{
     margin-top:1rem;
     font-size:1.1rem;
-    color:var(--dark);
-    text-transform:uppercase;
+    color:#6b1e00;
+    /* text-transform:uppercase; */
 }
 .events-grid{
     display:grid;
@@ -26,8 +30,9 @@
     border-radius:1rem;
     padding:1rem;
     text-align:center;
-    transition:transform .3s ease, box-shadow .3s ease}
+    transition:transform .3s ease, box-shadow .3s ease;
 
+}
 /* .event-card:hover{transform:translateY(-6px); box-shadow:0 8px 20px rgba(0,0,0,.5)} */
 .event-card img{width:67px;height:67px;margin:1rem auto}
 .event-card h3{
@@ -45,4 +50,7 @@
   display: flex;
   justify-content: center;
   margin-top: 0rem;
+        overflow-x: hidden;
+
+
 }

@@ -10,6 +10,7 @@
 .contact-section {
   display: flex;
   align-items: center;
+
 }
 
 .contact-content {
@@ -70,7 +71,7 @@
     /* slightly darker overlay for readability on small screens */
     background:
       linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.70)),
-      url("../assets/images/joinUs.png") center / cover no-repeat;
+      url("/images/joinUs.png") center / cover no-repeat;
   }
 
   .section-heading h2{
