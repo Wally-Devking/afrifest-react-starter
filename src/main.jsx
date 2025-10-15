@@ -5,11 +5,10 @@ import './styles/variables.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import PressRelease from "./components/PressRelease";
 import Contact from "./components/Contact";
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import About from './components/About.jsx';
 import FaqPage from './components/FaqPage.jsx'; 
-import './styles/fonts.css';
-
+import './styles/fonts.css'; // ✅ removed the space before .css
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter basename="/afrifest-react-starter">   {/* ✅ this is the key fix */}
