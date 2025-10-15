@@ -186,7 +186,9 @@
   gap: 14px;
 }
 .form-grid label{
-  display: grid; gap: 6px; font-weight: 600; font-size: .95rem;
+  display: grid; gap: 6px; font-weight: 400; font-size: .95rem;
+      font-family: "gobold lowplus" ;
+
 }
 .form-grid input,
 .form-grid select,
@@ -194,7 +196,7 @@
   border: 1px solid #dfe3ea;
   border-radius: 12px;
   padding: 12px 12px;
-  font: inherit;
+  font-family: "gobold lowplus" ;
   outline: none;
 }
 .form-grid input:focus,
@@ -202,6 +204,7 @@
 .form-grid textarea:focus{
   border-color: var(--afri-accent);
   box-shadow: 0 0 0 3px rgba(255,92,5,.15);
+
 }
 
 .form-grid .full{ grid-column: 1 / -1; }

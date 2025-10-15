@@ -8,6 +8,7 @@ import Partners from "./Partners";
 import Events from "./Events";
 import contact_jpg from "/images/contact.jpg";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xjkapoez";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -18,22 +19,37 @@ export default function Contact() {
   const onSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
+
     try {
-      const res = await fetch("/send_email.php", {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
-        body: new URLSearchParams(form).toString(),
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...form,
+          _subject: form.subject || "New message from Afrifest contact form",
+          _replyto: form.email,                  // lets Formspree set reply-to
+          form_source: "Afrifest Contact page",
+        }),
       });
+
       const data = await res.json().catch(() => ({}));
-      if (data?.success) {
-        alert("Message sent successfully!");
+
+      if (res.ok) {
+        alert("Message sent! We’ll get back to you shortly.");
         setForm({ name: "", email: "", subject: "", message: "" });
       } else {
-        alert("Error sending message. Please try again later.");
+        // Show Formspree validation messages if present
+        const msg =
+          data?.errors?.map((e) => e.message).join("\n") ||
+          "Error sending message. Please try again later.";
+        alert(msg);
       }
     } catch (err) {
-      alert("Error sending message. Please try again later.");
       console.error(err);
+      alert("Network error. Please try again.");
     } finally {
       setSubmitting(false);
     }
@@ -41,11 +57,10 @@ export default function Contact() {
 
   return (
     <>
+    <Marquee />
       <Navbar />
-      <Marquee />
 
       <main className="contact">
-        {/* Header band */}
         <header className="contact__hero">
           <div className="container">
             <h1>Contact Us</h1>
@@ -53,15 +68,22 @@ export default function Contact() {
           </div>
         </header>
 
-        {/* Two-column layout */}
         <section className="container contact__grid">
           <aside className="contact__image" aria-hidden="true">
-            <img src={contact_jpg} alt="contact image" />
+            <img src={contact_jpg} alt="Contact" />
           </aside>
 
-          {/* Right: Form */}
           <div className="contact__panel">
-            <form className="contact-form" onSubmit={onSubmit}>
+            {/* Native fallback: action+method ensure the form still submits without JS */}
+            <form
+              className="contact-form"
+              onSubmit={onSubmit}
+              action={FORMSPREE_ENDPOINT}
+              method="POST"
+            >
+              {/* Honeypot to reduce spam */}
+              <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} />
+
               <div className="form-row">
                 <label htmlFor="name">Full Name</label>
                 <input
@@ -112,10 +134,15 @@ export default function Contact() {
                 />
               </div>
 
+              {/* Optional hidden subject for the non-JS fallback */}
+              <input type="hidden" name="_subject" value={form.subject || "Afrifest Contact Form"} />
+
               <div className="form-actions">
                 <button className="btn btn--primary" type="submit" disabled={submitting}>
                   {submitting ? "Sending…" : "Send Message"}
                 </button>
+                <input type="hidden" name="_next" value="https://theafrifest.com/thanks" />
+
               </div>
             </form>
           </div>
@@ -124,7 +151,7 @@ export default function Contact() {
 
       <Events />
       <Sponsors />
-      <Partners />  
+      <Partners />
       <Footer />
     </>
   );

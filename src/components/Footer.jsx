@@ -16,7 +16,7 @@ export default function Footer(){
           <h5 className="footer-title">Quick Links</h5>
           <ul className="footer-links list-unstyled">
             <li><a href="https://lagosnight.co.uk/" target='blank'>Lagos Night</a></li>
-            <li><a href="#">Lasgidi</a></li>
+            <li><a href="#">Las gidi</a></li>
             <li><a href="https://fewgoodmen.co.uk/" target='blank'>FewGoodMen</a></li>
           </ul>
         </div>
@@ -40,7 +40,7 @@ export default function Footer(){
 
       <div className="text-center">
         <p className="mb-0 small">
-          &copy; {new Date().getFullYear()} Few Good Men Ltd. | Developed by{' '}
+          &copy; {new Date().getFullYear()} Few Good Men Ltd.  |  Developed by{' '}
           <a href="https://wa.me/+2348061631123" target="_blank" rel="noreferrer" className="dev-link">WallyDev</a>
         </p>
       </div>

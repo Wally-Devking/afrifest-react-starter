@@ -3,7 +3,7 @@ import "../styles/Partnersection.css";
 import afrilogo from "/images/afrilogo2.png";
 
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xkgobnvj";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xjkapoez";
 
 
 export default function PartnersSection({
