@@ -8,11 +8,11 @@ import '../styles/merch.css'
 
 const items = [
   // { src: '/images/afe2.jpg', name: 'Afrifest Polo',     tag: 'New',      link: 'https://lasgidi.co.uk/product/classic-unisex-pullover-hoodie-2/' },
-  { src: '/afrifest-react-starter/images/afe1.jpg', name: 'Afrifest Top',      tag: 'New',      link: 'https://lasgidi.co.uk/product/classic-unisex-pullover-hoodie/' },
-  { src: '/afrifest-react-starter/images/afe3.jpg', name: 'Las Gidi Bag',      tag: 'Limited',  link: 'https://lasgidi.co.uk/product/classic-tote-bag-3/' },
-  { src: '/afrifest-react-starter/images/afe4.jpg', name: 'Afrifest T-shirt',  tag: 'Hot',      link: 'https://lasgidi.co.uk/product/organic-in-conversion-unisex-t-shirt/' },
-  { src: '/afrifest-react-starter/images/afe5.jpg', name: 'Afrifest Bag',      tag: 'Limited',  link: 'https://lasgidi.co.uk/product/classic-tote-bag-2/' }, // removed leading '/'
-  { src: '/afrifest-react-starter/images/afe6.webp',name: 'Afrifest Hoodie',   tag: 'Limited',  link: 'https://lasgidi.co.uk/product/classic-unisex-pullover-hoodie-gildan-18500/' },
+  { src: '/images/afe1.jpg', name: 'Afrifest Top',      tag: 'New',      link: 'https://lasgidi.co.uk/product/classic-unisex-pullover-hoodie/' },
+  { src: '/images/afe3.jpg', name: 'Las Gidi Bag',      tag: 'Limited',  link: 'https://lasgidi.co.uk/product/classic-tote-bag-3/' },
+  { src: '/images/afe4.jpg', name: 'Afrifest T-shirt',  tag: 'Hot',      link: 'https://lasgidi.co.uk/product/organic-in-conversion-unisex-t-shirt/' },
+  { src: '/images/afe5.jpg', name: 'Afrifest Bag',      tag: 'Limited',  link: 'https://lasgidi.co.uk/product/classic-tote-bag-2/' }, // removed leading '/'
+  { src: '/images/afe6.webp',name: 'Afrifest Hoodie',   tag: 'Limited',  link: 'https://lasgidi.co.uk/product/classic-unisex-pullover-hoodie-gildan-18500/' },
 ];
 
 

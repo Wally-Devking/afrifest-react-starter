@@ -6,7 +6,7 @@
   --shadow: 0 18px 45px rgba(0,0,0,.45);
   --shadow-active: 0 24px 60px rgba(0,0,0,.55);
   --shadow-neighbor: 0 14px 32px rgba(0,0,0,.28);
-  --gap: 16px;
+  gap: 16px;
 
   padding: 0 100px;
     overflow-x: hidden;
@@ -25,7 +25,7 @@
   justify-content:center; 
   text-align:center;
   margin: 0 0 20px;
-  font-size: clamp(.9rem, 1.6vw, 1rem);
+  font-size: 1rem !important;
   color: #6b1e00;
   padding: 0 10px;
 }
@@ -109,6 +109,12 @@
   .gallery-slider, .gallery-slider .swiper, .gallery-slider .swiper-wrapper{ overflow: visible !important; }
   .swiper-button-next, .swiper-button-prev{ display: none; } /* cleaner mobile UI */
   .gallery-caption{ bottom: 10px; font-size: .9rem; padding: 6px 10px; }
+  .gallery-title{
+    font-size: clamp(1.7rem, 5vw, 1.8rem);
+  }
+    .gallery-subtitle{
+    font-size: 0.8rem;  
+  }
 }
 
 /* Small phones */

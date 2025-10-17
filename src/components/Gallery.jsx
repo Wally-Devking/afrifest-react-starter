@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "../styles/gallery.css";
 
 const REEL_URLS = [
-  "https://www.instagram.com/p/DOyuOYSgdJH/",
+  "https://www.instagram.com/afrifest_east/",
   "https://www.instagram.com/p/DPhOq7-Fb4J/",
   "https://www.instagram.com/p/DPTe30-jLNe/",
   "https://www.instagram.com/p/DOjM_wIEUYg/",

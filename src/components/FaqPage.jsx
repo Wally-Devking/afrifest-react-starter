@@ -17,8 +17,10 @@ export default function FaqPage() {
     { q: "Do I need an ID to attend the event?", a: "No! You will not be required to present ID on entry. However, if you are lucky to look under 25, you will be required to present proof of identity (e.g. Drivers Licence, Passport etc.) to purchase alcohol." },
     { q: "Is there a dress code for the event?", a: "No! There is no dress code required to attend the event. However, if you would like to share your culture on the day or be selected as best dressed on the day, then please come in your native attire." },
     { q: "How much do kids under 12 have to pay for tickets?", a: "Kids aged under 12 years old do not have to pay to attend. Just turn up at the event and have a memorable family time." },
-    { q: "When does the after party start?", a: "Doors to the After Party opens at 10.30pm and runs until 3am, 17th August." },
-    { q: "Are dogs allowed?", a: "Unfortunately, due to limited space, dogs are not allowed at the event this year." }
+    { q: "When does the after party start?", a: "Follow our social media channels for all the official After Party details." },
+    { q: "Are dogs allowed?", a: " No, dogs are not allowed at the event" },
+    { q: "Do you offer discounts for carers accompanying individuals who are registered disabled?", a: " Yes, please get in touch here (add link to the contact us page)" },
+    { q: "Will there be security available at the event?", a: " Yes. For everyone's safety, there will be a bag search upon entry, and security personnel will be stationed throughout the venue." }
   ];
 
   return (

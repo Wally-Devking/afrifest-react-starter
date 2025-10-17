@@ -41,11 +41,17 @@ export default function About(){
 
         <div className="about-inner">
         <div>
-          <h2>Who We Are</h2>
-          <p><strong>Afri-Fest East</strong> is  the first-of-its  kind and largest Afrocentric summer event in East  Anglia.
-          <br />We aim to fill a noticeable gap in the outdoor entertainment space, catering to a diverse audience.</p>
-          <p>Our goal is to promote and celebrate African culture through music, food, and dance, ultimately improving cohesion and integration with various communities in East Anglia.</p>
-          <p>Our event will include live performances from artists, engaging kid’s activities, workshops, and African-inspired cuisine. Afri-Fest also offers unique opportunities to promote both local, small, and medium-scale businesses.</p>
+<h2>Who we are: </h2>
+
+<p>Afri-Fest East is the largest Afrocentric summer event in East Anglia. We are the summer destination to experience the continent's rich heritage and vibrant contemporary spirit.</p>
+
+<h2>Our Mission</h2>
+
+<p>Our mission is to enthusiastically promote and celebrate African culture, its roots and evolving global influence. We do this through music, innovative cuisine, and captivating modern live performances. Our ultimate goal is to improve cohesion and integration among the various communities across East Anglia by creating a space for shared contemporary celebration. </p>
+
+<h2>What to Expect</h2>
+
+ <p>The festival features a dynamic lineup that includes live performances from cutting-edge artists, engaging kids' activities, hands-on workshops, exhibitions, an artisan market and authentic African street food. Afri-Fest also serves as a valuable platform, offering unique promotional opportunities for small, and medium-scale businesses, national and international brands looking to connect with a culturally rich audience.</p>
 
           <div className="shop-btn">
 

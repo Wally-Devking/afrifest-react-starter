@@ -8,7 +8,7 @@
 
 .merch-header { 
   text-align: center; 
-  margin-bottom: 24px; 
+  margin: 24px; 
 }
 .merch-title {
   letter-spacing: 0.4px;
@@ -18,8 +18,7 @@
 
 }
 .merch-subtitle {
-  opacity: 0.85;
-  font-size: 1rem;
+  font-size: 1rem !important;
   margin-top: 6px;
 
 }
@@ -112,8 +111,24 @@
 
 /* Mobile spacing */
 @media (max-width: 480px) {
-  .merch-section2 { padding: 44px 0 30px; }
-  .item-name { font-size: 14px; }
+  .merch-section2 { 
+    padding: 44px 0 30px; 
+  }
+  .item-name { 
+    font-size: 14px; 
+  }
+@media (max-width: 768px) {
+  }
+  .merch-section2 { 
+    padding: 50px 20px; 
+  }
+  .merch-title {
+  letter-spacing: 0.4px;
+  font-weight: 700;
+  color: #6b1e00;
+    font-size: 1.7rem;
+
+}
 }
 
 

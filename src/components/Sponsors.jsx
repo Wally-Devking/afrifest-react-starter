@@ -2,6 +2,7 @@ import '../styles/sponsors.css'
 
 export default function Sponsors(){
   return (
+    
       <><section className="tear-img tear-top" style={{ "--tear-h": "48px", zIndex: "1", background: "#6b1e00" }}></section><section className="sponsors-section py-3 bg-light">
       <div className="container">
         <div className="row">
@@ -11,25 +12,22 @@ export default function Sponsors(){
         </div>
         <div className="row justify-content-center align-items-center g-4">
           <div className="col-6 col-md-2 col-lg-2 text-center">
-            <img src="/afrifest-react-starter/images/log9.jpg" alt="Sponsor 1" className="sponsor-logo img-fluid" />
+            <img src="/images/log9.jpg" alt="Sponsor 1" className="sponsor-logo img-fluid" />
+          </div>
+                    <div className="col-6 col-md-2 col-lg-2 text-center">
+            <img src="/images/BB.jpg" alt="Sponsor 4" className="sponsor-logo img-fluid" />
           </div>
           <div className="col-6 col-md-2 col-lg-2 text-center">
-            <img src="/afrifest-react-starter/images/mel.png" alt="Sponsor 2" className="sponsor-logo img-fluid" />
+            <img src="/images/mel.png" alt="Sponsor 2" className="sponsor-logo img-fluid" />
           </div>
           <div className="col-6 col-md-2 col-lg-2 text-center">
-            <img src="/afrifest-react-starter/images/CC.jpg" alt="Sponsor 3" className="sponsor-logo img-fluid" />
+            <img src="/images/CC.jpg" alt="Sponsor 3" className="sponsor-logo img-fluid" />
           </div>
           <div className="col-6 col-md-2 col-lg-2 text-center">
-            <img src="/afrifest-react-starter/images/BB.jpg" alt="Sponsor 4" className="sponsor-logo img-fluid" />
+            <img src="/images/frugs.png" alt="Sponsor 5" className="sponsor-logo img-fluid" />
           </div>
           <div className="col-6 col-md-2 col-lg-2 text-center">
-            <img src="/afrifest-react-starter/images/frugs.png" alt="Sponsor 5" className="sponsor-logo img-fluid" />
-          </div>
-          <div className="col-6 col-md-3 col-lg-2 text-center">
-            <img src="/afrifest-react-starter/images/DD.jpg" alt="Partner 3" className="partner-logo img-fluid" />
-          </div>
-          <div className="col-6 col-md-2 col-lg-2 text-center">
-            <img src="/afrifest-react-starter/images/EE.jpg" alt="Sponsor 6" className="sponsor-logo img-fluid" />
+            <img src="/images/EE.jpg" alt="Sponsor 6" className="sponsor-logo img-fluid" />
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ const texts = [
   'Next Event Loading... 15th August 2026',
   "Don't Miss Out!!!",
   'Be a Sponsor | Partner',
-  'Come Let Us Celebrate Africa Together',
+  "Come, Let's Celebrate Africa Together",
   'Ticket Now On Sale',
 
 ];

@@ -59,7 +59,7 @@ export default function FaqHome({ seeMoreTo = "/faq" }) {
       </div>
 
       <div className="faq-actions">
-        <Link to={seeMoreTo} className="">See all FAQs</Link>
+        <Link to={seeMoreTo} className="seemore">See all FAQs</Link>
         {/* If you're not using React Router, replace the Link with:
             <a href="/faq" className="hero-btn">See all FAQs</a>
         */}

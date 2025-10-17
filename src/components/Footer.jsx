@@ -16,7 +16,7 @@ export default function Footer(){
           <h5 className="footer-title">Quick Links</h5>
           <ul className="footer-links list-unstyled">
             <li><a href="https://lagosnight.co.uk/" target='blank'>Lagos Night</a></li>
-            <li><a href="#">Las gidi</a></li>
+            <li><a href="https://lasgidi.co.uk/">Las gidi</a></li>
             <li><a href="https://fewgoodmen.co.uk/" target='blank'>FewGoodMen</a></li>
           </ul>
         </div>
@@ -27,12 +27,13 @@ export default function Footer(){
             <a href="mailto:admin@fewgoodmen.co.uk" aria-label="Email"><i className="fas fa-envelope" target="blank"></i></a>
             <a href="https://web.facebook.com/profile.php?id=61560358343870" target='blank' aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/afrifest_east" aria-label="Instagram" target='blank'><i className="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@afrifest.east.uk?_t=ZN-90beL6sHZju&_r=1" aria-label="Tiktok" target='blank'><i className="fab fa-tiktok"></i></a>
           </div>
         </div>
 
         <div className="col-md-4 text-md-end text-center">
           <img src={footerlogo_png} alt="Afri-Fest East" className="footer-logo mb-3" />
-          <p className="footer-text small mb-0">Celebrating authentic African taste and culture</p>
+          <p className="footer-text small mb-0">Celebrating the spirit of Africa in the East.</p>
         </div>
       </div>
 

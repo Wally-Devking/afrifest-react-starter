@@ -147,14 +147,14 @@ const handleSubmit = async (e) => {
 }
 
 const defaultTiles = [
-  { src: "/afrifest-react-starter/images/log9.jpg", alt: "Smiling woman" },
-  { src: "/afrifest-react-starter/images/EE.jpg", alt: "Woman with juice" },
-  { src: "/afrifest-react-starter/images/FF.png", alt: "Chicken hands" },
-  { src: "/afrifest-react-starter/images/log8.jpg", alt: "Serving man" },
-  { src: "/afrifest-react-starter/images/DD.jpg", alt: "Two women" },
-  { src: "/afrifest-react-starter/images/log7.jpg", alt: "Man in black" },
-  { src: "/afrifest-react-starter/images/CC.png", alt: "Woman in teal" },
-  { src: "/afrifest-react-starter/images/BB.png", alt: "Woman in teal" }
+  { src: "/images/log9.jpg", alt: "Smiling woman" },
+  { src: "/images/EE.jpg", alt: "Woman with juice" },
+  { src: "/images/FF.png", alt: "Chicken hands" },
+  { src: "/images/log8.jpg", alt: "Serving man" },
+  { src: "/images/DD.jpg", alt: "Two women" },
+  { src: "/images/log7.jpg", alt: "Man in black" },
+  { src: "/images/CC.png", alt: "Woman in teal" },
+    { src: "/images/BB.png", alt: "Woman in teal" }
 
 ];
 

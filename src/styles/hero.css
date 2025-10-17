@@ -1,79 +1,273 @@
+:root{
+  --hero-height: 78vh;
+  --hero-min-height: 320px;
+  --accent: #E7A23A;
+  --arrow-size: 84px;
+  --dot-size: 10px;
+  --breakpoint-sm: 720px;
+}
+
 .hero-section{
-    position:relative;
-    width:100%;height:85vh;overflow:hidden}
-.background-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1}
-.desktop-video{display:block}.mobile-video{display:none}
-@media (max-width:768px){
-    .desktop-video{
-        display:relative
-    }
-    .mobile-video{
-display:block;
-    }
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: var(--hero-min-height);
+  overflow: hidden;
 }
 
+/* Ensure carousel container is visible and clickable */
+.background-carousel{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: auto; /* allow interactions */
+  display: block;
+
+}
+
+/* video shown only on mobile */
+.hero-video{
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* center overlay text */
 .hero-overlay{
-position:relative;
-z-index:2;
-height:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:#fff;
-padding:20px;
-background:rgba(0,0,0,.3)}
-.hero-overlay h2{
-    font-size:3rem;
-    font-weight:900;
-    text-transform:uppercase;
-    margin-bottom:-10px
-}
-.hero-overlay p{
-    font-size:2rem;
-    margin-bottom:-10px;
-}
-.hero-btn{
-    display:inline-block;
-    padding:20px 70px;
-    font-size:1.2rem;
-    font-weight:700;
-    background:#dd3216;
-    color:#fff;
-    border-radius:30px;
-    transition:all .3s ease;
-    margin-top:20px;
-}
-
-/* .hero-btn2{
-    display:inline-block;
-    padding:15px 40px;
-    font-size:1.2rem;
-    font-weight:700;
-    background:#00a01a;
-    color:#fff;
-    border-radius:30px;
-    transition:all .3s ease;
-    margin-top:20px;
-} */
-.hero-btn:hover{background:#dd3216;transform:scale(1.05)}
-.hero-btn2:hover{transform:scale(1.05)}
-
-.accent{color:#fcaf23;font-weight:800}.date{color:#ffff;font-weight:800}
-
-/* place beside your existing styles */
-/* .hero-actions{
+  position: relative;
+  z-index: 4;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  gap: 30px;                /* space between buttons */
-  justify-content: center;   /* center horizontally */
   align-items: center;
-  flex-wrap: wrap;           /* stack on very small screens */
-  margin-top: -1rem;
-} */
+  justify-content: center;      /* center vertically/horizontally */
+  box-sizing: border-box;
+  color: white;
+  pointer-events: auto;
+  text-align: center;
+background: rgba(77, 76, 76, 0.18); /* stronger dark overlay */ 
 
-@media (max-width:468px){
-    .hero-btn2{
-  margin-top: -10px;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.11);
+  z-index: 1; /* behind overlay content which should be z-index:2 */
+}
+/* center content box */
+.hero-content{
+  margin: 0 auto;
+}
+
+/* typography */
+.hero-overlay h2{ 
+    color: white;
+    font-size: 3.5rem;
+    line-height: 1.05; 
+    font-weight: 600; 
+    }
+.accent{ 
+    color: var(--accent); 
+    font-weight: 600; 
+}
+.hero-overlay h3{ 
+    margin: .6rem 0 1rem 0; 
+    color: var(--muted-2); 
+}
+
+.hero-actions{ margin-top: 1rem; display:flex; gap:1rem; justify-content:center; }
+.hero-btn{ 
+    background:#dd3216; 
+    color: rgba(255, 255, 255, 1); 
+    padding: 1.1rem 4rem; 
+    border: 1px solid white;
+    border-radius: 30px; 
+    font-weight:700; 
+    font-size:1.1rem;
+    text-decoration:none; 
+    box-shadow: 0 0 12px rgba(221,50,22,.6); 
+    cursor:pointer; 
+}
+
+.hero-btn:hover{ 
+    transition: all .3s ease;
+transform:translateY(-2px);
+}
+
+.hero-btn {
+  pointer-events: auto;
+}
+
+
+/* carousel */
+.carousel{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.carousel-track{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100%;
+  transition: transform 600ms cubic-bezier(.22,.9,.2,1);
+  will-change: transform;
+}
+
+.carousel-slide{
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.carousel-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* indicators centered at bottom */
+.carousel-indicators.centered{
+  position: absolute;
+  bottom: 16px;
+  display: flex;
+  gap: 10px;
+  z-index: 6;
+  pointer-events: auto;
+}
+
+.carousel-ind{
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 0, 0, 1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+
+.carousel-ind.is-active,
+.carousel-ind[aria-selected="true"]{
+  background: white;
+  transform: scale(1.15);
+}
+
+/* responsive: show video on small screens, hide carousel */
+@media (max-width: 720px){
+  .desktop-only{ display: none; }
+  .mobile-only{ display: block; }
+
+  .hero-overlay{ padding: 1.2rem; text-align: center; }
+  .carousel-arrow{ 
+    display: none; 
+  }
+  .carousel-indicators{ 
+    display: none; 
+  }
+  .hero-overlay h2{ 
+    color: white;
+    font-size: 2.3rem;
+    line-height: 1.05; 
+    font-weight: 600; 
+    }
+.accent{ 
+    color: var(--accent); 
+    font-weight: 600; 
+    font-size: 1.4rem;
+
+}
+.hero-overlay h3{ 
+    margin: .6rem 0 1rem 0; 
+    color: var(--muted-2); 
 }
 }
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .carousel-track{ transition: none !important; }
+  .carousel-arrow, .hero-btn{ transition: none !important; }
+}
+
+/* =========================
+   Carousel Arrows (Afrifest style)
+   ========================= */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 28px;
+  line-height: 52px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.65);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-arrow--left {
+  left: 18px;
+}
+
+.carousel-arrow--right {
+  right: 18px;
+}
+
+/* Ensure arrows sit above slides */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: darker image overlay so text stands out */
+.carousel-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.17);
+  z-index: 1;
+}
+
+/* Ensure images stay below overlay */
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Keep your existing indicator styles but make sure active dots are visible */
+.carousel-ind.is-active {
+  background: #fff;
+}
+
+
+
+.hero-overlay {
+  pointer-events: none;
+}
+
