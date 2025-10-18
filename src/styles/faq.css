@@ -132,6 +132,14 @@
   .faq-q{ padding:16px 14px; }
   .faq-a{ padding:0 14px 14px; font-size:14px; }
 }
+
+ .faq-page-container{
+    width: 100%;
+    padding-bottom: 20px;
+      overflow-x: hidden;
+      padding: 1rem;
+
+}
 @media (max-width:480px){
   .faq-title{ font-size:28px; }
   .faq-subtitle{ font-size:13px; }

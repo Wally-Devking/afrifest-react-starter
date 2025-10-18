@@ -1,3 +1,9 @@
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+
 .navbar{
   width:100%; position:sticky; top:0; z-index:1000;
   display:flex; justify-content:space-between; align-items:center;
@@ -22,8 +28,8 @@
   80%{transform:translateX(2px)} 100%{transform:translateX(0)}
 }
 @media (max-width:968px){
-  .nav-links{position:fixed; top:0; right:-100%; height:100vh; width:200px; 
-    background:rgba(255,255,255,.95); backdrop-filter:blur(10px); flex-direction:column; justify-content:center; align-items:center; gap:30px; transition:right .4s ease}
+  .nav-links{position:fixed; top:0; right:-100%; height:500px; width:200px; 
+    background:rgba(233, 227, 227, 0.95); backdrop-filter:blur(10px); flex-direction:column; justify-content:center; align-items:center; gap:30px; transition:right .4s ease}
   .nav-links.active{right:0}
   .hamburger{display:flex}
 }
@@ -69,3 +75,148 @@
 }
 
 
+/* -------------------------
+   ORIGINAL NAVBAR STYLES
+   ------------------------- */
+.navbar{
+  width:100%; position:sticky; top:0; z-index:1000;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:8px 50px; 
+  backdrop-filter: blur(12px); box-shadow:0 4px 20px rgba(0,0,0,0.05);
+}
+
+.logo{display:flex; align-items:center; height:70px}
+.logo img{height:110%; width:auto; object-fit:contain; transition:transform .3s ease}
+.nav-links{display:flex; align-items:center; gap:54px}
+.nav-links a{color:var(--dark); font-weight:500; font-size:1rem; transition:color .3s ease; padding:5px 8px; display:inline-block}
+.nav-links a:hover{color:#dd3216; animation:vibrate-bounce .7s ease}
+.btn{background:var(--primary); color:var(--light); font-weight:600; cursor:pointer; transition:.3s ease; box-shadow:0 0 10px rgba(255,90,95,.5); padding:.6rem 1rem; border:0}
+.btn:hover{background:#dd3216; box-shadow:0 0 18px rgba(255,90,95,.8); color:var(--light); transform:translateY(-2px)}
+.hamburger{display:none; flex-direction:column; gap:5px; background:transparent; border:0; cursor:pointer}
+.hamburger span{width:25px; height:3px; background:var(--dark); border-radius:5px; display:block}
+@keyframes vibrate-bounce{
+  0%{transform:translateX(0)} 20%{transform:translateX(-8px)}
+  40%{transform:translateX(16px)} 60%{transform:translateX(-8px)}
+  80%{transform:translateX(2px)} 100%{transform:translateX(0)}
+}
+
+/* Prevent accidental horizontal scroll when off-canvas panels are present */
+
+/* -------------------------
+   SLIDE-OUT MENU (MOBILE)
+   ------------------------- */
+/* Keep same breakpoint you already used */
+@media (max-width:968px){
+  .nav-links{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 700px;           
+    width: min(100vw, 180px);  
+    border-radius: 20px;    /* cap width so panel never pushes page */
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;  /* so X button can sit at top */
+    gap: 15px;
+    transition: transform .36s cubic-bezier(.2,.8,.2,1);
+    transform: translateX(100%);  /* hide off-screen on the right */
+    overflow-y: hidden;             /* allow panel internal scroll */
+    box-shadow: -8px 0 30px rgba(0,0,0,0.06);
+    padding: 8px 12px;
+    z-index: 1000;                /* above overlay/content */
+  }
+
+  /* When menu is active, bring it into view */
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  /* Tighter gap for mobile link list; keep your visual spacing */
+  .nav-links > li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* If you render a UL with inner anchors, make them stack neatly */
+  .nav-links a,
+  .nav-links .btn,
+  .nav-links button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 14px;
+    border-radius: 8px;
+  }
+
+  /* If you use a .nav-list wrapper (from previous snippets), ensure good padding */
+  .nav-links .nav-list {
+    padding: 6px 6px 18px 6px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Show hamburger on mobile (keeps original style) */
+  .hamburger { display:flex; z-index: 1010; }
+
+  /* Overlay - dim page & capture outside clicks */
+  .nav-overlay{
+    position: fixed;
+    inset: 0;
+    z-index: 995;                /* below menu but above page content */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Close (X) button styles -- positioned inside the panel, top-right */
+  .nav-close {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: #111;
+    font-size: 30px;
+    line-height: 1;
+    padding: 6px 10px;
+    cursor: pointer;
+    align-self: flex-end;  /* sits at top-right of panel */
+    margin: 4px;
+    border-radius: 6px;
+  }
+
+  .nav-close:focus {
+    outline: 2px solid rgba(0,0,0,0.08);
+    outline-offset: 2px;
+  }
+
+  /* Keep the logo area unaffected on mobile but ensure it's not overlaid */
+  .navbar .logo { z-index: 1020; }
+
+  /* Prevent the nav-links from causing layout shifts */
+  .nav-links,
+  .nav-overlay,
+  .hamburger { -webkit-tap-highlight-color: transparent; -webkit-user-select: none; user-select: none; }
+
+  /* Make sure anchors inside the panel do not inherit large desktop gap */
+  .nav-links a { margin: 0; }
+}
+
+/* -------------------------
+   DESKTOP (UNCHANGED)
+   ------------------------- */
+@media (min-width: 969px){
+  /* Nothing changed here — your original desktop menu rules remain effective */
+  .nav-overlay { display: none; }
+  .nav-links { position: static; transform: none; height: auto; width: auto; background: transparent; box-shadow: none; display:flex; flex-direction:row; gap:54px; align-items:center; overflow:visible; }
+  .nav-links .nav-close { display:none; }
+  .hamburger { display:none; }
+}
+/* helper class applied to <body> while menu is open */
+body.no-scroll {
+  position: fixed;
+  inset: 0 0 auto 0; /* top/left/right anchored; bottom auto so page height isn't forced */
+  width: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}

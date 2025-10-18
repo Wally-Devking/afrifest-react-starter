@@ -13,15 +13,13 @@ const REEL_URLS = [
   "https://www.instagram.com/p/DPhOq7-Fb4J/",
   "https://www.instagram.com/p/DPTe30-jLNe/",
   "https://www.instagram.com/p/DOjM_wIEUYg/",
-  "https://www.instagram.com/p/DPTo55vjOUW/",
   "https://www.instagram.com/p/DOv8PL-jD8J/",
   "https://www.instagram.com/p/DOber4-jbm2/", 
-  "https://www.instagram.com/p/DPX1Y3xj4tJ/",
   "https://www.instagram.com/p/DOEkArLDFKx/",
   "https://www.instagram.com/p/DN020oGWE8L/",
   "https://www.instagram.com/p/DNqjc69M9NA/",
-  "https://www.instagram.com/p/DNoPpPwMQbA/",
   "https://www.instagram.com/p/DOeDZFQidoZ/",
+  "https://www.instagram.com/p/DOY1Nk-jKf2/",
 ];
 
 function loadInstagramEmbedScriptOnce() {

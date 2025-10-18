@@ -1,69 +1,124 @@
-.partners-section {
-  height: 35vh;
-  text-align: center;
+.partners-section .section-title{
+      padding-top:0rem;
+    color:#00a01a;
 }
 
-/* Default desktop size */
-.partner-logo {
-  height: 70px;
+.partners-section{
+      margin-bottom:-2rem;
+}
+/* tighten the per-column padding so logos sit closer together */
+.partners-section .row.g-4 > [class*="col-"] {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+/* Uniform logo card */
+.partners-section .logo-box {
+  width: 180px;
+  height: 96px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.15s;
+}
+
+/* image fills the card, preserves aspect ratio */
+.partners-section .logo-box img.partner-logo,
+.partners-section .logo-box img.sponsor-logo {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  object-position: center;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-.partner-logo:hover {
-  transform: scale(1.0);
+/* hover/focus */
+.partners-section .logo-box:hover,
+.partners-section .logo-box:focus-within {
+  transform: translateY(-3px) scale(1.02);
+  opacity: 0.98;
 }
 
-.section-title{
-  color: #00a01a;
- margin-bottom: -30px;
-  font-weight: 700;
+/* ----------------------------
+   Responsive adjustments
+   ----------------------------*/
 
-}
-/* === RESPONSIVE BREAKPOINTS === */
-
-/* Tablets */
+/* Desktop → medium (tablets / small laptops) */
 @media (max-width: 992px) {
-  .partner-logo {
-    height: 80px;
-    margin: 10px;
+  .partners-section .logo-box {
+    width: 185px;
+    height: 100px;
+    padding: 7px;
+    max-width: 220px;
+    max-height: 120px;
   }
 }
 
-/* Large phones */
-
-
-@media (max-width: 480px) {
-  .partner-logo {
-    height: 60px;
-    margin: 6px;
+/* Small tablets / large phones */
+@media (max-width: 600px) {
+  .partners-section .logo-box {
+    width: 170px;
+    height: 96px;
+    padding: 6px;
+    max-width: 190px;
   }
 }
-@media (max-width: 768px){
-  .partners-section{
-        text-align: center;
+
+/* Mobile: aim for two columns, bigger logos and less spacing */
+@media (max-width: 720px) {
+  /* Keep columns tighter */
+  .partners-section .row.g-4 > [class*="col-"] {
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 6px;
   }
-  .partners-section {
-  height:42vh;
-  text-align: center;
+
+  /* Make logo card bigger and centered */
+  .partners-section .logo-box {
+    width: 200px;
+    height: 98px;
+    padding: 6px;
+    max-width: 220px;
+    max-height: 110px;
+  }
+
+  /* If you use col-6 for mobile; ensure they act as 50% width */
+  .partners-section .row.g-4 > .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
- .partner-logo {
-    height: 50px;
-    margin: -2px;
-    justify-content: center;
-    display: inline-block;     
 
-
-  }
-  
-
-  .partners-section .partners-logo{
-    width: 150px !important;   /* uniform
-    height: 150px !important;   /* uniform box */
-    margin: 0px 0px !important;
-    display: inline-block;
-    object-fit: contain;        /* no distortion */
-    vertical-align: middle;
+/* Very small phones: single column fallback with centered cards */
+@media (max-width: 420px) {
+  .partners-section .row.g-4 > .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
+  .partners-section .logo-box {
+    width: 190px;
+    height: 108px;
+    padding: 0px;
+    max-width: 100%;
+  }
+}
+
+/* Extra tiny screens — stack to one per row if needed */
+@media (max-width: 320px) {
+  .partners-section .row.g-4 > .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .partners-section .logo-box {
+    width: 180px;
+    height: 96px;
+  }
 }

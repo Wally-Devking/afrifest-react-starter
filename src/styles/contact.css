@@ -95,10 +95,10 @@ input::placeholder, textarea::placeholder{ color:#9ca3af; }
 /* Responsive: hide image on small screens, form full width */
 @media (max-width: 900px){
   .contact{    
-    background: url("../assets/images/joinUs.png") center/cover no-repeat;
-    background-color: rgba(0, 0, 0, 0.7); /* overlay color */
+    background: url("/images/BGyellow.png") center/cover no-repeat;
+    /* background-color: rgba(0, 0, 0, 0.7);  */
     background-blend-mode: multiply;  /* or: darken */
-    color: #fff;
+    color: #000000ff;
   }
 
   .contact__grid{
@@ -111,6 +111,6 @@ input::placeholder, textarea::placeholder{ color:#9ca3af; }
     margin-bottom: 20px; width: 100%;
   }
   .contact__hero p{
-  margin: 0; color: var(--bg);
+  margin: 0; color: #000000ff;
 }
 }
